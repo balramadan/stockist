@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/soft-ui-dashboard-tailwind.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/soft-ui-dashboard-tailwind.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/nucleo-icons.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/nucleo-svg.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/tooltips.css">
+    <!-- // Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- // FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Iconify -->
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/icons.css">
     <style>
         body {
             padding: 0;

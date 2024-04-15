@@ -4,7 +4,7 @@
             <a href="#" class="font-medium text-xl">Stockist</a>
         </div>
         <div class='space-y-5'>
-            <h1 class="lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">Permudah pencatatan stok di gudang</h1>
+            <h1 class="text-white lg:text-3xl xl:text-5xl xl:leading-snug font-extrabold">Permudah pencatatan stok di gudang</h1>
             <!-- <p class="text-lg">Sudah punya akun? <a href="<?= base_url('login') ?>">Login disini</a></p> -->
             <!-- <button class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">Login disini</button> -->
         </div>
