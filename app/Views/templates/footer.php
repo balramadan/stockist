@@ -17,5 +17,7 @@
 
 <!-- Iconify -->
 <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<!-- github button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +16,16 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Iconify -->
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/icons.css">
+    <!-- Popper -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
     <style>
-        body {
-            padding: 0;
-            margin: 0;
-        }
+    body {
+        padding: 0;
+        margin: 0;
+    }
     </style>
     <title>Stockist | <?= $judul ?></title>
 </head>
+
 <body>

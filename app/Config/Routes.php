@@ -5,7 +5,12 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
+
+// Dashboard
 $routes->get('/', 'Dashboard::index', ['filter' => 'auth']);
+
+// Product
+$routes->get('/product', 'Product::index', ['filter' => 'auth']);
 
 // Login
 $routes->get('/login', 'Login::index');
