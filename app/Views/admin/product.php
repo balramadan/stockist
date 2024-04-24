@@ -27,14 +27,14 @@
                 </li>
 
                 <li class="mt-0.5 w-full">
-                    <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>product">
-                        <div class="bg-gradient-to-tl from-purple-700 to-pink-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                    <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>produk">
+                        <div class="bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <title>box-variant</title>
                                 <path fill="white" d="M2 10.96a.985.985 0 0 1-.37-1.37L3.13 7c.11-.2.28-.34.47-.42l7.83-4.4c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.19.1.35.26.44.46l1.45 2.52c.28.48.11 1.09-.36 1.36l-1 .58v4.96c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-5.54c-.3.17-.68.18-1 0m10-6.81v6.7l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-3.22l-5 2.9c-.33.18-.7.17-1 .01v3.69zm-5.15-2.55l6.28-3.63l-.58-1.01l-6.28 3.63z" />
                             </svg>
                         </div>
-                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Product</span>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Produk</span>
                     </a>
                 </li>
 
@@ -45,7 +45,7 @@
                                 <path class="fill-slate-800 opacity-60" d="M11 13.5v8H3v-8zM12 2l5.5 9h-11zm5.5 11c2.5 0 4.5 2 4.5 4.5S20 22 17.5 22S13 20 13 17.5s2-4.5 4.5-4.5" />
                             </svg>
                         </div>
-                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Category</span>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Bahan</span>
                     </a>
                 </li>
 
@@ -121,11 +121,11 @@
                     <!-- breadcrumb -->
                     <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
                         <li class="leading-normal text-sm">
-                            <a class="opacity-50 text-slate-700" href="javascript:;">Pages</a>
+                            <a class="opacity-50 text-slate-700" href="javascript:;">Halaman</a>
                         </li>
-                        <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']" aria-current="page">Product</li>
+                        <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']" aria-current="page">Produk</li>
                     </ol>
-                    <h6 class="mb-0 font-bold capitalize">Product</h6>
+                    <h6 class="mb-0 font-bold capitalize">Produk</h6>
                 </nav>
 
                 <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
@@ -241,35 +241,276 @@
 
         <!-- Add product -->
         <div class="flex flex-row justify-end px-10 py-2">
-            <button type="button" class="flex flex-row items-center justify-between inline-block px-6 py-3 font-bold text-center text-white uppercase align-middle transition-all rounded-lg cursor-pointer bg-gradient-to-tl from-purple-700 to-pink-500 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85 hover:shadow-soft-xs"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="18" height="18" viewBox="0 0 24 24">
+            <button type="button" data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light" class="flex flex-row px-8 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="18" height="18" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M20 14h-6v6h-4v-6H4v-4h6V4h4v6h6z" />
-                </svg><p class="capitalize font-bold">Add Product</p></button>
+                </svg>
+                <p class="capitalize font-bold">Tambah Produk</p>
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div data-twe-modal-dialog-ref class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
+                <div class="relative w-auto m-2 transition-transform duration-300 pointer-events-none sm:m-7 sm:max-w-125 sm:mx-auto ease-soft-out -translate-y-13">
+                    <div class="relative flex flex-col w-full bg-white border border-solid pointer-events-auto dark:bg-gray-950 bg-clip-padding border-black/20 rounded-xl outline-0">
+                        <div class="flex items-center justify-between bg-white p-4 border-b border-solid shrink-0 border-slate-100 rounded-t-xl">
+                            <h5 class="mb-0 leading-normal text-black" id="ModalLabel">Tambah Produk</h5>
+                            <i class="ml-4 fas fa-upload"></i>
+                            <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
+                        </div>
+                        <!-- Form -->
+                        <form action="">
+                            <div class="relative flex-auto p-4 bg-white">
+                                <div class="flex flex-col">
+                                    <label for="inputNamaProduk">Nama Produk</label>
+                                    <input type="text" id="inputNamaProduk" class="py-2 px-3">
+                                </div>
+                            </div>
+                            <div class="relative flex-auto p-4 bg-white">
+                                <div class="flex flex-col">
+                                    <label for="inputKategoriProduk">Kategori Produk</label>
+                                    <input type="text" id="inputKategoriProduk" class="py-2 px-3">
+                                </div>
+                            </div>
+                            <div class="relative flex-auto p-4 bg-white">
+                                <div class="flex flex-col">
+                                    <label for="inputDeskProduk">Deskripsi Produk</label>
+                                    <input type="text" id="inputDeskProduk" class="py-2 px-3">
+                                </div>
+                            </div>
+                            <div class="relative flex-auto p-4 bg-white">
+                                <div class="flex flex-col">
+                                    <label for="inputDeskProduk">Link Gambar Produk</label>
+                                    <input type="url" id="inputDeskProduk" class="py-2 px-3">
+                                </div>
+                            </div>
+                            <div class="relative flex-auto p-4 bg-white">
+                                <div class="flex flex-col">
+                                    <label for="inputHargaProduk">Harga Produk</label>
+                                    <input type="text" id="inputHargaProduk" class="py-2 px-3">
+                                </div>
+                            </div>
+                            <div class="relative flex-auto p-4 bg-white">
+                                <div class="flex flex-col">
+                                    <label for="inputJumlahProduk">Jumlah Produk</label>
+                                    <input type="number" id="inputJumlahProduk" class="py-2 px-3">
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
+                                <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
+                                <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- end  -->
 
         <!-- Tabs -->
         <!--Heads up! 👋Plugins: @tailwindcss/forms-->
-        <div class="px-10 py-2">
-            <div class="sm:hidden">
-                <label for="Tab" class="sr-only">Tab</label>
-
-                <select id="Tab" class="w-full rounded-md border-gray-200">
-                    <option>Active</option>
-                    <option>Deactive</option>
-                </select>
+        <div x-data="{ activeTab: 1 }" class="px-10 py-4 sm:py-2">
+            <!-- Buttons -->
+            <div class="flex justify-start border-b border-gray-200">
+                <div role="tablist" class="-mb-px max-[480px]:max-w-[180px] inline-flex flex-wrap justify-center" @keydown.right.prevent.stop="$focus.wrap().next()" @keydown.left.prevent.stop="$focus.wrap().prev()" @keydown.home.prevent.stop="$focus.first()" @keydown.end.prevent.stop="$focus.last()">
+                    <!-- Button #1 -->
+                    <button id="tab-1" class="shrink-0 mr-4 border-b-2 px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700" :class="activeTab === 1 ? 'text-sky-900 border-sky-500' : 'text-sky-600 hover:text-sky-900'" :tabindex="activeTab === 1 ? 0 : -1" :aria-selected="activeTab === 1" aria-controls="tabpanel-1" @click="activeTab = 1" @focus="activeTab = 1">Aktif</button>
+                    <!-- Button #2 -->
+                    <button id="tab-2" class="shrink-0 border-b-2 px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700" :class="activeTab === 2 ? 'text-sky-900 border-sky-500' : 'text-sky-600 hover:text-sky-900'" :tabindex="activeTab === 2 ? 0 : -1" :aria-selected="activeTab === 2" aria-controls="tabpanel-2" @click="activeTab = 2" @focus="activeTab = 2">Tidak aktif</button>
+                </div>
             </div>
 
-            <div class="hidden sm:block">
-                <div class="border-b border-gray-200">
-                    <nav class="-mb-px flex gap-6">
-                        <a href="#" class="shrink-0 rounded-t-lg border border-gray-300 border-b-white p-3 text-sm font-medium text-sky-600">
-                            Active
-                        </a>
+            <div class="mt-4">
+                <div x-cloak x-show="activeTab === 1" class="">
+                    <div class="hidden lg:grid lg:grid-cols-4 lg:gap-4 opacity-60">
+                        <div class="text-left justify-start">Nama Produk</div>
+                        <div class="text-center justify-center">Jumlah Produk</div>
+                        <div class="text-center justify-center">Harga Satuan</div>
+                        <div class="text-right justify-end">Edit</div>
+                    </div>
+                    <div class="py-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-2">
+                            <!-- Produk 1 -->
+                            <!-- Tampilan jika layar di Desktop -->
+                            <div class="text-left hidden lg:block justify-start">
+                                <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                <p class="text-xs">#G1713027468598VO</p>
+                                <p class="text-xs">Category</p>
+                            </div>
+                            <!-- Tampilan jika di Layar Mobile -->
+                            <div class="block lg:hidden text-left justify-start">
+                                <div class="">
+                                    <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                    <p class="text-xs">#G1713027468598VO</p>
+                                    <p class="text-xs">Category</p>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Stok</p>
+                                    <p>:</p>
+                                    <span class="">50</span>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Harga satuan</p>
+                                    <p>:</p>
+                                    <span class="">15.900</span>
+                                </div>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>50</p>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>15.900</p>
+                            </div>
+                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
+                        </div>
 
-                        <a href="#" class="shrink-0 border border-transparent p-3 text-sm font-medium text-gray-500 hover:text-gray-700">
-                            Deactive
-                        </a>
-                    </nav>
+                        <!-- Produk 2 -->
+                        <!-- Tampilan jika di layar Desktop -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-2">
+                            <div class="text-left hidden lg:block justify-start">
+                                <h3 class="text-base">[Pet Simulator X] 100M Gems</h3>
+                                <p class="text-xs">#G216736551237716</p>
+                                <p class="text-xs">Category</p>
+                            </div>
+                            <!-- Tampilan jika Layar Mobile -->
+                            <div class="block lg:hidden text-left justify-start">
+                                <div class="">
+                                    <h3 class="text-base">[Pet Simulator X] 100M Gems</h3>
+                                    <p class="text-xs">#G216736551237716</p>
+                                    <p class="text-xs">Category</p>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Stok</p>
+                                    <p>:</p>
+                                    <span class="">50</span>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Harga satuan</p>
+                                    <p>:</p>
+                                    <span class="">24.900</span>
+                                </div>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>50</p>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>24.900</p>
+                            </div>
+                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
+                        </div>
+
+                        <!-- Produk 3 -->
+                        <!-- Tampilan jika di layar Desktop -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-2">
+                            <div class="text-left hidden lg:block justify-start">
+                                <h3 class="text-base">[Pet Simulator X] 100M Gems</h3>
+                                <p class="text-xs">#G216736551237716</p>
+                                <p class="text-xs">Category</p>
+                            </div>
+                            <!-- Tampilan jika Layar Mobile -->
+                            <div class="block lg:hidden text-left justify-start">
+                                <div class="">
+                                    <h3 class="text-base">[Pet Simulator X] 100M Gems</h3>
+                                    <p class="text-xs">#G216736551237716</p>
+                                    <p class="text-xs">Category</p>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Stok</p>
+                                    <p>:</p>
+                                    <span class="">50</span>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Harga satuan</p>
+                                    <p>:</p>
+                                    <span class="">24.900</span>
+                                </div>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>50</p>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>24.900</p>
+                            </div>
+                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div x-cloak x-show="activeTab === 2">
+                    <div class="hidden lg:grid lg:grid-cols-4 lg:gap-4 opacity-60">
+                        <div class="text-left justify-start">Nama Produk</div>
+                        <div class="text-center justify-center">Jumlah Produk</div>
+                        <div class="text-center justify-center">Harga Satuan</div>
+                        <div class="text-right justify-end">Edit</div>
+                    </div>
+                    <div class="py-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-2">
+                            <!-- Tampilan jika layar Desktop -->
+                            <div class="text-left hidden lg:block justify-start">
+                                <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                <p class="text-xs">#G1713027468598VO</p>
+                                <p class="text-xs">Category</p>
+                            </div>
+                            <!-- Tampilan jika Layar Mobile -->
+                            <div class="block lg:hidden text-left justify-start">
+                                <div class="">
+                                    <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                    <p class="text-xs">#G1713027468598VO</p>
+                                    <p class="text-xs">Category</p>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Stok</p>
+                                    <p>:</p>
+                                    <span class="">0</span>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Harga satuan</p>
+                                    <p>:</p>
+                                    <span class="">15.900</span>
+                                </div>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>0</p>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>15.900</p>
+                            </div>
+                            <div class="text-right justify-end">Edit</div>
+                        </div>
+
+                        <!-- Tampilan jika layar Desktop -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-2">
+                            <div class="text-left hidden lg:block justify-start">
+                                <h3 class="text-base">[Pet Simulator X] 100M Gems</h3>
+                                <p class="text-xs">#G216736551237716</p>
+                                <p class="text-xs">Category</p>
+                            </div>
+                            <!-- Tampilan jika Layar Mobile -->
+                            <div class="block lg:hidden text-left justify-start">
+                                <div class="">
+                                    <h3 class="text-base">[Pet Simulator X] 100M Gems</h3>
+                                    <p class="text-xs">#G216736551237716</p>
+                                    <p class="text-xs">Category</p>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Stok</p>
+                                    <p>:</p>
+                                    <span class="">0</span>
+                                </div>
+                                <div class="flex flex-row gap-4 mt-2 text-sm">
+                                    <p>Harga satuan</p>
+                                    <p>:</p>
+                                    <span class="">24.900</span>
+                                </div>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>0</p>
+                            </div>
+                            <div class="text-center hidden lg:block justify-center">
+                                <p>24.900</p>
+                            </div>
+                            <div class="text-right justify-end">Edit</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,67 +552,33 @@
     </main>
     <!-- Akhir Main -->
 
-    <div fixed-plugin>
-        <!-- <a fixed-plugin-button class="bottom-7.5 right-7.5 text-xl z-990 shadow-soft-lg rounded-circle fixed cursor-pointer bg-white px-4 py-2 text-slate-700">
-        <i class="py-2 pointer-events-none fa fa-cog"> </i>
-      </a> -->
-        <!-- -right-90 in loc de 0-->
-        <div fixed-plugin-card class="z-sticky shadow-soft-3xl w-90 ease-soft -right-90 fixed top-0 left-auto flex h-full min-w-0 flex-col break-words rounded-none border-0 bg-white bg-clip-border px-2.5 duration-200">
-            <div class="px-6 pt-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
-                <div class="float-left">
-                    <h5 class="mt-4 mb-0">Soft UI Configurator</h5>
-                    <p>See our dashboard options.</p>
-                </div>
-                <div class="float-right mt-6">
-                    <button fixed-plugin-close-button class="inline-block p-0 mb-4 font-bold text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer hover:scale-102 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 active:opacity-85 text-slate-700">
-                        <i class="fa fa-close"></i>
-                    </button>
-                </div>
-                <!-- End Toggle Button -->
-            </div>
-            <hr class="h-px mx-0 my-1 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
-            <div class="flex-auto p-6 pt-0 sm:pt-4">
-                <!-- Sidebar Backgrounds -->
-                <div>
-                    <h6 class="mb-0">Sidebar Colors</h6>
-                </div>
-                <a href="javascript:void(0)">
-                    <div class="my-2 text-left" sidenav-colors>
-                        <span class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-purple-700 to-pink-500 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-slate-700 text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" active-color data-color-from="purple-700" data-color-to="pink-500" onclick="sidebarColor(this)"></span>
-                        <span class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-gray-900 to-slate-800 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color-from="gray-900" data-color-to="slate-800" onclick="sidebarColor(this)"></span>
-                        <span class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-blue-600 to-cyan-400 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color-from="blue-600" data-color-to="cyan-400" onclick="sidebarColor(this)"></span>
-                        <span class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-green-600 to-lime-400 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color-from="green-600" data-color-to="lime-400" onclick="sidebarColor(this)"></span>
-                        <span class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-red-500 to-yellow-400 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color-from="red-500" data-color-to="yellow-400" onclick="sidebarColor(this)"></span>
-                        <span class="text-xs rounded-circle h-5.75 mr-1.25 w-5.75 ease-soft-in-out bg-gradient-to-tl from-red-600 to-rose-400 relative inline-block cursor-pointer whitespace-nowrap border border-solid border-white text-center align-baseline font-bold uppercase leading-none text-white transition-all duration-200 hover:border-slate-700" data-color-from="red-600" data-color-to="rose-400" onclick="sidebarColor(this)"></span>
-                    </div>
-                </a>
-                <!-- Sidenav Type -->
-                <div class="mt-4">
-                    <h6 class="mb-0">Sidenav Type</h6>
-                    <p class="leading-normal text-sm">Choose between 2 different sidenav types.</p>
-                </div>
-                <div class="flex">
-                    <button transparent-style-btn class="inline-block w-full px-4 py-3 mb-2 font-bold text-center text-white uppercase align-middle transition-all border border-transparent border-solid rounded-lg cursor-pointer xl-max:cursor-not-allowed xl-max:opacity-65 xl-max:pointer-events-none xl-max:bg-gradient-to-tl xl-max:from-purple-700 xl-max:to-pink-500 xl-max:text-white xl-max:border-0 hover:scale-102 hover:shadow-soft-xs active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 bg-gradient-to-tl from-purple-700 to-pink-500 bg-fuchsia-500 hover:border-fuchsia-500" data-class="bg-transparent" active-style>Transparent</button>
-                    <button white-style-btn class="inline-block w-full px-4 py-3 mb-2 ml-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg cursor-pointer xl-max:cursor-not-allowed xl-max:opacity-65 xl-max:pointer-events-none xl-max:bg-gradient-to-tl xl-max:from-purple-700 xl-max:to-pink-500 xl-max:text-white xl-max:border-0 hover:scale-102 hover:shadow-soft-xs active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 border-fuchsia-500 bg-none text-fuchsia-500 hover:border-fuchsia-500" data-class="bg-white">White</button>
-                </div>
-                <p class="block mt-2 leading-normal text-sm xl:hidden">You can change the sidenav type just on desktop view.</p>
-                <!-- Navbar Fixed -->
-                <div class="mt-4">
-                    <h6 class="mb-0">Navbar Fixed</h6>
-                </div>
-                <div class="min-h-6 mb-0.5 block pl-0">
-                    <input navbarFixed class="rounded-10 duration-250 ease-soft-in-out after:rounded-circle after:shadow-soft-2xl after:duration-250 checked:after:translate-x-5.25 h-5 relative float-left mt-1 ml-auto w-10 cursor-pointer appearance-none border border-solid border-gray-200 bg-slate-800/10 bg-none bg-contain bg-left bg-no-repeat align-top transition-all after:absolute after:top-px after:h-4 after:w-4 after:translate-x-px after:bg-white after:content-[''] checked:border-slate-800/95 checked:bg-slate-800/95 checked:bg-none checked:bg-right" type="checkbox" />
-                </div>
-                <hr class="h-px bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent sm:my-6" />
-                <a class="inline-block w-full px-6 py-3 mb-4 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer leading-pro text-xs ease-soft-in hover:shadow-soft-xs hover:scale-102 active:opacity-85 tracking-tight-soft shadow-soft-md bg-150 bg-x-25 bg-gradient-to-tl from-gray-900 to-slate-800" href="https://www.creative-tim.com/product/soft-ui-dashboard-tailwind" target="_blank">Free Download</a>
-                <a class="inline-block w-full px-6 py-3 mb-4 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:shadow-soft-xs hover:scale-102 active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 border-slate-700 text-slate-700 hover:bg-transparent hover:text-slate-700 hover:shadow-none active:bg-slate-700 active:text-white active:hover:bg-transparent active:hover:text-slate-700 active:hover:shadow-none" href="https://www.creative-tim.com/learning-lab/tailwind/html/quick-start/soft-ui-dashboard/" target="_blank">View documentation</a>
-                <div class="w-full text-center">
-                    <a class="github-button" href="https://github.com/creativetimofficial/soft-ui-dashboard-tailwind" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star creativetimofficial/soft-ui-dashboard on GitHub">Star</a>
-                    <h6 class="mt-4">Thank you for sharing!</h6>
-                    <a href="https://twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20Tailwind%20made%20by%20%40CreativeTim&hashtags=webdesign,dashboard,tailwindcss&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard-tailwind" class="inline-block px-6 py-3 mb-0 mr-2 font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer hover:shadow-soft-xs hover:scale-102 active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 me-2 border-slate-700 bg-slate-700" target="_blank"> <i class="mr-1 fab fa-twitter"></i> Tweet </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard-tailwind" class="inline-block px-6 py-3 mb-0 mr-2 font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer hover:shadow-soft-xs hover:scale-102 active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft shadow-soft-md bg-150 bg-x-25 me-2 border-slate-700 bg-slate-700" target="_blank"> <i class="mr-1 fab fa-facebook-square"></i> Share </a>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <!-- Script -->
+    <script>
+        // Input Harga di Tambah Produk
+        var rupiah = document.getElementById("inputHargaProduk");
+        rupiah.addEventListener("keyup", function(e) {
+            // tambahkan 'Rp.' pada saat form di ketik
+            // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+            rupiah.value = formatRupiah(this.value, "Rp. ");
+        });
+
+        /* Fungsi formatRupiah */
+        function formatRupiah(angka, prefix) {
+            var number_string = angka.replace(/[^,\d]/g, "").toString(),
+                split = number_string.split(","),
+                sisa = split[0].length % 3,
+                rupiah = split[0].substr(0, sisa),
+                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+            // tambahkan titik jika yang di input sudah menjadi angka ribuan
+            if (ribuan) {
+                separator = sisa ? "." : "";
+                rupiah += separator + ribuan.join(".");
+            }
+
+            rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+            return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
+        }
+    </script>
 </body>

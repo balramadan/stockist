@@ -15,8 +15,10 @@
 <script src="<?= base_url() ?>assets/js/plugins/chartjs.min.js"></script>
 <script src="<?= base_url() ?>assets/js/plugins/Chart.extension.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
+<script src="<?= base_url() ?>assets/js/main.js"></script>
 <!-- Iconify -->
-<script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
 <!-- github button -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>

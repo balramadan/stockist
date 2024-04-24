@@ -1,5 +1,5 @@
 <div class="flex flex-row w-full min-h-screen justify-around">
-    <div class="hidden lg:flex flex-col bg-red-500 text-white justify-between lg:p-8 xl:p-12 lg:max-w-sm xl:max-w-lg">
+    <div class="hidden lg:flex flex-col bg-sky-500 text-white justify-between lg:p-8 xl:p-12 lg:max-w-sm xl:max-w-lg">
         <div class="flex items-center justify-start space-x-3">
             <a href="#" class="font-medium text-xl">Stockist</a>
         </div>
@@ -31,7 +31,7 @@
                 </label>
                 <input type="password" name="password" id="InputForPassword" class="form-control flex px-3 py-2 md:px-4 md:py-3 border-2 border-black rounded-lg font-medium placeholder:font-normal">
             </div>
-            <button type="submit" class="flex items-center justify-center flex-none px-3 py-2 md:px-4 md:py-3 border-2 rounded-lg font-medium border-black bg-black text-white">Login</button>
+            <button type="submit" class="flex items-center justify-center flex-none hover:bg-sky-600 hover:border-none ease-in-out duration-300 px-3 py-2 md:px-4 md:py-3 rounded-lg font-medium bg-black text-white">Login</button>
         </form>
     </div>
 </div>
