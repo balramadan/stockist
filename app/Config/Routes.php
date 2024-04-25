@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 
 // Dashboard
 $routes->get('/', 'Dashboard::index', ['filter' => 'auth']);
+$routes->get('/admin', 'Dashboard::admin', ['filter' => 'auth']);
 
 // Produk
 $routes->get('/produk', 'Product::index', ['filter' => 'auth']);
@@ -15,12 +16,18 @@ $routes->get('/produk/get', 'Product::getApi');
 $routes->get('/produk/post', 'Product::postApi');
 
 // Edit Produk
-$routes->get('produk/edit/(:alphanum)', 'Product::edit/$1');
+$routes->get('/produk/edit/(:alphanum)', 'Product::edit/$1', ['filter' => 'auth']);
+
+// Bahan
+$routes->get('/bahan', 'Material::index', ['filter' => 'auth']);
+
+// Edit Bahan
+$routes->get('/bahan/edit/(:alphanum)', 'Material::edit/$1', ['filter' => 'auth']);
 
 // Login
 $routes->get('/login', 'Login::index');
 $routes->post('/login/auth', 'Login::auth');
-$routes->get('/logout', 'Login::logout');
+$routes->get('/logout', 'Login::logout', ['filter' => 'auth']);
 
 // Register
 $routes->get('/regadmin', 'Register::index');
