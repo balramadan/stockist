@@ -1,6 +1,4 @@
-<?php $session = session();
-
-use App\Models\ModelUser; ?>
+<?php $session = session(); ?>
 
 <body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
     <!-- sidenav  -->
@@ -50,7 +48,7 @@ use App\Models\ModelUser; ?>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Bahan</span>
                     </a>
                 </li>
-                
+
                 <li class="mt-0.5 w-full">
                     <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>admin">
                         <div class="bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
@@ -67,7 +65,7 @@ use App\Models\ModelUser; ?>
                 </li>
 
                 <li class="mt-0.5 w-full">
-                    <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-slate-50" href="../pages/profile.html">
+                    <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-slate-50" href="<?= base_url() ?>profile">
                         <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                             <svg width="12px" height="12px" viewBox="0 0 46 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>customer-support</title>
@@ -306,7 +304,7 @@ use App\Models\ModelUser; ?>
                 <tfoot>
                     <tr>
                         <th></th>
-                        <th>Name</th>
+                        <th>Nama</th>
                         <th>Email</th>
                         <th>Job</th>
                         <th>Dibuat pada</th>
