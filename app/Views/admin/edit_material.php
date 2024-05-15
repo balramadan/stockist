@@ -1,4 +1,4 @@
-<?php $session = session(); ?>
+<?php $session = session();?>
 
 <body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
     <!-- sidenav  -->
@@ -27,11 +27,11 @@
                 </li>
 
                 <li class="mt-0.5 w-full">
-                    <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>produk">
-                        <div class="bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+                    <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-slate-50" href="<?= base_url() ?>produk">
+                        <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                 <title>box-variant</title>
-                                <path fill="white" d="M2 10.96a.985.985 0 0 1-.37-1.37L3.13 7c.11-.2.28-.34.47-.42l7.83-4.4c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.19.1.35.26.44.46l1.45 2.52c.28.48.11 1.09-.36 1.36l-1 .58v4.96c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-5.54c-.3.17-.68.18-1 0m10-6.81v6.7l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-3.22l-5 2.9c-.33.18-.7.17-1 .01v3.69zm-5.15-2.55l6.28-3.63l-.58-1.01l-6.28 3.63z" />
+                                <path fill="currentColor" d="M2 10.96a.985.985 0 0 1-.37-1.37L3.13 7c.11-.2.28-.34.47-.42l7.83-4.4c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.19.1.35.26.44.46l1.45 2.52c.28.48.11 1.09-.36 1.36l-1 .58v4.96c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-5.54c-.3.17-.68.18-1 0m10-6.81v6.7l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-3.22l-5 2.9c-.33.18-.7.17-1 .01v3.69zm-5.15-2.55l6.28-3.63l-.58-1.01l-6.28 3.63z" />
                             </svg>
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Produk</span>
@@ -39,10 +39,10 @@
                 </li>
 
                 <li class="mt-0.5 w-full">
-                    <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-slate-50" href="<?= base_url() ?>bahan">
-                        <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5">
+                    <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>bahan">
+                        <div class="bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="m2.53 19.65l1.34.56v-9.03l-2.43 5.86c-.41 1.02.06 2.19 1.09 2.61m19.5-3.7L17.07 4a2 2 0 0 0-1.81-1.25c-.26 0-.53.04-.79.15L7.1 5.95a2.02 2.02 0 0 0-1.23 1.8c-.01.25.04.54.13.8l5 11.95c.29.78 1.03 1.24 1.81 1.25c.26 0 .52-.05.77-.15l7.36-3.05a1.994 1.994 0 0 0 1.09-2.6M7.88 8.75a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.55 0 1 .45 1 1s-.45 1-1 1m-2 11a2 2 0 0 0 2 2h1.45l-3.45-8.34z" />
+                                <path fill="white" d="m2.53 19.65l1.34.56v-9.03l-2.43 5.86c-.41 1.02.06 2.19 1.09 2.61m19.5-3.7L17.07 4a2 2 0 0 0-1.81-1.25c-.26 0-.53.04-.79.15L7.1 5.95a2.02 2.02 0 0 0-1.23 1.8c-.01.25.04.54.13.8l5 11.95c.29.78 1.03 1.24 1.81 1.25c.26 0 .52-.05.77-.15l7.36-3.05a1.994 1.994 0 0 0 1.09-2.6M7.88 8.75a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.55 0 1 .45 1 1s-.45 1-1 1m-2 11a2 2 0 0 0 2 2h1.45l-3.45-8.34z" />
                             </svg>
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Bahan</span>
@@ -121,9 +121,9 @@
                         <li class="leading-normal text-sm">
                             <a class="opacity-50 text-slate-700" href="javascript:;">Halaman</a>
                         </li>
-                        <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']" aria-current="page">Produk</li>
+                        <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']" aria-current="page">Edit</li>
                     </ol>
-                    <h6 class="mb-0 font-bold capitalize">Produk</h6>
+                    <h6 class="mb-0 font-bold capitalize">Edit Bahan: <?= $id ?></h6>
                 </nav>
 
                 <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
@@ -158,7 +158,7 @@
 
                         <!-- notifications -->
 
-                        <li class="relative flex items-center px-2 sm:px-4 lg:px-2">
+                        <li class="relative flex items-center pl-2 sm:px-4 lg:px-2">
                             <p class="hidden transform-dropdown-show"></p>
                             <a href="javascript:;" class="block p-0 transition-all text-sm ease-nav-brand text-slate-500" dropdown-trigger aria-expanded="false">
                                 <i class="cursor-pointer fa fa-bell"></i>
@@ -236,185 +236,39 @@
         </nav>
 
         <!-- end Navbar -->
-        
-        <!-- Main Code -->
-        <!-- Add product -->
-        <div class="flex flex-row justify-end px-10 py-2">
-            <button type="button" data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light" class="flex flex-row px-8 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="18" height="18" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M20 14h-6v6h-4v-6H4v-4h6V4h4v6h6z" />
-                </svg>
-                <p class="capitalize font-bold">Tambah Produk</p>
-            </button>
-        </div>
 
-        <!-- Modal -->
-        <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div data-twe-modal-dialog-ref class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
-                <div class="relative w-auto m-2 transition-transform duration-300 pointer-events-none sm:m-7 sm:max-w-125 sm:mx-auto ease-soft-out -translate-y-13">
-                    <div class="relative flex flex-col w-full bg-grey-100 border border-solid pointer-events-auto dark:bg-gray-950 bg-clip-padding border-black/20 rounded-xl outline-0">
-                        <div class="flex items-center justify-between bg-white p-4 border-b border-solid shrink-0 border-slate-100 rounded-t-xl">
-                            <h5 class="mb-0 leading-normal text-black" id="ModalLabel">Tambah Produk</h5>
-                            <i class="ml-4 fas fa-upload"></i>
-                            <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
-                        </div>
-                        <!-- Form -->
-                        <form action="">
-                            <div class="relative flex-auto p-4 bg-white">
-                                <div class="flex flex-col">
-                                    <label for="inputNamaProduk">Nama Produk</label>
-                                    <input type="text" id="inputNamaProduk" class="py-2 px-3 bg-white">
-                                </div>
-                            </div>
-                            <div class="relative flex-auto p-4 bg-white">
-                                <div class="flex flex-col">
-                                    <label for="inputKategoriProduk">Kategori Produk</label>
-                                    <input type="text" id="inputKategoriProduk" class="py-2 px-3 bg-white">
-                                </div>
-                            </div>
-                            <div class="relative flex-auto p-4 bg-white">
-                                <div class="flex flex-col">
-                                    <label for="inputDeskProduk">Deskripsi Produk</label>
-                                    <input type="text" id="inputDeskProduk" class="py-2 px-3 bg-white">
-                                </div>
-                            </div>
-                            <div class="relative flex-auto p-4 bg-white">
-                                <div class="flex flex-col">
-                                    <label for="inputDeskProduk">Link Gambar Produk</label>
-                                    <input type="url" id="inputGambarProduk" class="py-2 px-3 bg-white">
-                                </div>
-                            </div>
-                            <div class="relative flex-auto p-4 bg-white">
-                                <div class="flex flex-col">
-                                    <label for="inputHargaProduk">Harga Produk</label>
-                                    <input type="text" id="inputHargaProduk" class="py-2 px-3 bg-white">
-                                </div>
-                            </div>
-                            <div class="relative flex-auto p-4 bg-white">
-                                <div class="flex flex-col">
-                                    <label for="inputJumlahProduk">Jumlah Produk</label>
-                                    <input type="number" id="inputJumlahProduk" class="py-2 px-3 bg-white">
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
-                                <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
-                                <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
-                            </div>
-                        </form>
+        <div x-cloak class="relative flex flex-col w-full bg-transparent pointer-events-auto px-10 py-2">
+            <form action="">
+                <div class="relative flex-auto">
+                    <div class="flex flex-col">
+                        <label for="inputNamaBahan">Nama Bahan</label>
+                        <input type="text" id="inputNamaBahan" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
-            </div>
+                <div class="relative flex-auto">
+                    <div class="flex flex-col">
+                        <label for="inputDeskBahan">Link Gambar Bahan</label>
+                        <input type="url" id="inputDeskBahan" class="py-2 px-3 bg-white text-black">
+                    </div>
+                </div>
+                <div class="relative flex-auto">
+                    <div class="flex flex-col">
+                        <label for="inputJumlahBahan">Jumlah Bahan</label>
+                        <input type="number" id="inputJumlahBahan" class="py-2 px-3 bg-white text-black">
+                    </div>
+                </div>
+                <div class="relative flex-auto">
+                    <div class="flex flex-col">
+                        <label for="inputKategoriBahan">Asal Pemasok</label>
+                        <input type="text" id="inputKategoriBahan" class="py-2 px-3 bg-white text-black">
+                    </div>
+                </div>
+                <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
+                    <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
+                    <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+                </div>
+            </form>
         </div>
-        <!-- end modal -->
-
-        <!-- Tabs -->
-        <!--Heads up! 👋Plugins: @tailwindcss/forms-->
-        <div x-data="{ activeTab: 1 }" class="px-10 py-4 sm:py-2">
-            <!-- Buttons -->
-            <div class="flex justify-start border-b border-gray-200">
-                <div role="tablist" class="-mb-px max-[480px]:max-w-[180px] inline-flex flex-wrap justify-center" @keydown.right.prevent.stop="$focus.wrap().next()" @keydown.left.prevent.stop="$focus.wrap().prev()" @keydown.home.prevent.stop="$focus.first()" @keydown.end.prevent.stop="$focus.last()">
-                    <!-- Button #1 -->
-                    <button id="tab-1" class="shrink-0 mr-4 border-b-2 px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700" :class="activeTab === 1 ? 'text-sky-900 border-sky-500' : 'text-sky-600 hover:text-sky-900'" :tabindex="activeTab === 1 ? 0 : -1" :aria-selected="activeTab === 1" aria-controls="tabpanel-1" @click="activeTab = 1" @focus="activeTab = 1">Aktif</button>
-                    <!-- Button #2 -->
-                    <button id="tab-2" class="shrink-0 border-b-2 px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700" :class="activeTab === 2 ? 'text-sky-900 border-sky-500' : 'text-sky-600 hover:text-sky-900'" :tabindex="activeTab === 2 ? 0 : -1" :aria-selected="activeTab === 2" aria-controls="tabpanel-2" @click="activeTab = 2" @focus="activeTab = 2">Tidak aktif</button>
-                </div>
-            </div>
-
-            <div class="mt-4">
-                <div x-cloak x-show="activeTab === 1" class="text-slate-500">
-                    <div class="hidden lg:grid lg:grid-cols-4 lg:gap-4 opacity-60">
-                        <div class="text-left justify-start">Nama Produk</div>
-                        <div class="text-center justify-center">Jumlah Produk</div>
-                        <div class="text-center justify-center">Harga Satuan</div>
-                        <div class="text-right justify-end">Edit</div>
-                    </div>
-                    <div class="py-2">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-3">
-                            <?php for($i = 0; $i < 10; $i++): ?>
-                            <!-- Produk 1 -->
-                            <!-- Tampilan jika layar di Desktop -->
-                            <div class="text-left hidden lg:block justify-start">
-                                <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
-                                <p class="text-xs">#G1713027468598VO</p>
-                                <p class="text-xs">Category</p>
-                            </div>
-                            <!-- Tampilan jika di Layar Mobile -->
-                            <div class="block lg:hidden text-left justify-start">
-                                <div class="">
-                                    <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
-                                    <p class="text-xs">#G1713027468598VO</p>
-                                    <p class="text-xs">Category</p>
-                                </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Stok</p>
-                                    <p>:</p>
-                                    <span class="">50</span>
-                                </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Harga satuan</p>
-                                    <p>:</p>
-                                    <span class="">15.900</span>
-                                </div>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p>50</p>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p>15.900</p>
-                            </div>
-                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
-                            <?php endfor; ?>
-                        </div>
-                    </div>
-                </div>
-                <div x-cloak x-show="activeTab === 2">
-                    <div class="hidden lg:grid lg:grid-cols-4 lg:gap-4 opacity-60">
-                        <div class="text-left justify-start">Nama Produk</div>
-                        <div class="text-center justify-center">Jumlah Produk</div>
-                        <div class="text-center justify-center">Harga Satuan</div>
-                        <div class="text-right justify-end">Edit</div>
-                    </div>
-                    <div class="py-2">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-3">
-                            <?php for($i = 0; $i < 5; $i++): ?>
-                            <!-- Tampilan jika layar Desktop -->
-                            <div class="text-left hidden lg:block justify-start">
-                                <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
-                                <p class="text-xs">#G1713027468598VO</p>
-                                <p class="text-xs">Category</p>
-                            </div>
-                            <!-- Tampilan jika Layar Mobile -->
-                            <div class="block lg:hidden text-left justify-start">
-                                <div class="">
-                                    <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
-                                    <p class="text-xs">#G1713027468598VO</p>
-                                    <p class="text-xs">Category</p>
-                                </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Stok</p>
-                                    <p>:</p>
-                                    <span class="">0</span>
-                                </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Harga satuan</p>
-                                    <p>:</p>
-                                    <span class="">15.900</span>
-                                </div>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p>0</p>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p>15.900</p>
-                            </div>
-                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
-                            <?php endfor; ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end Tabs -->
-        <!-- End Main Code -->
 
         <!-- Footer -->
         <footer class="pt-4">
@@ -452,7 +306,6 @@
     </main>
     <!-- Akhir Main -->
 
-
     <!-- Script -->
     <script>
         // Input Harga di Tambah Produk
@@ -482,3 +335,7 @@
         }
     </script>
 </body>
+<!-- github button -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+</html>

@@ -16,10 +16,10 @@
     <div class="items-center block w-auto max-h-screen overflow-auto h-sidebar grow basis-full">
       <ul class="flex flex-col pl-0 mb-0">
         <li class="mt-0.5 w-full">
-          <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>">
-            <div class="bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
+          <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-slate-50" href="<?= base_url() ?>">
+            <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="white" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z" />
+                <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z" />
               </svg>
             </div>
             <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
@@ -39,10 +39,10 @@
         </li>
 
         <li class="mt-0.5 w-full">
-          <a class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors hover:bg-slate-50" href="<?= base_url() ?>bahan">
-            <div class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5">
+          <a class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors" href="<?= base_url() ?>bahan">
+            <div class="bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                <path fill="currentColor" d="m2.53 19.65l1.34.56v-9.03l-2.43 5.86c-.41 1.02.06 2.19 1.09 2.61m19.5-3.7L17.07 4a2 2 0 0 0-1.81-1.25c-.26 0-.53.04-.79.15L7.1 5.95a2.02 2.02 0 0 0-1.23 1.8c-.01.25.04.54.13.8l5 11.95c.29.78 1.03 1.24 1.81 1.25c.26 0 .52-.05.77-.15l7.36-3.05a1.994 1.994 0 0 0 1.09-2.6M7.88 8.75a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.55 0 1 .45 1 1s-.45 1-1 1m-2 11a2 2 0 0 0 2 2h1.45l-3.45-8.34z" />
+                <path fill="white" d="m2.53 19.65l1.34.56v-9.03l-2.43 5.86c-.41 1.02.06 2.19 1.09 2.61m19.5-3.7L17.07 4a2 2 0 0 0-1.81-1.25c-.26 0-.53.04-.79.15L7.1 5.95a2.02 2.02 0 0 0-1.23 1.8c-.01.25.04.54.13.8l5 11.95c.29.78 1.03 1.24 1.81 1.25c.26 0 .52-.05.77-.15l7.36-3.05a1.994 1.994 0 0 0 1.09-2.6M7.88 8.75a1 1 0 0 1-1-1a1 1 0 0 1 1-1c.55 0 1 .45 1 1s-.45 1-1 1m-2 11a2 2 0 0 0 2 2h1.45l-3.45-8.34z" />
               </svg>
             </div>
             <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Bahan</span>
@@ -121,9 +121,9 @@
             <li class="leading-normal text-sm">
               <a class="opacity-50 text-slate-700" href="javascript:;">Halaman</a>
             </li>
-            <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']" aria-current="page">Dashboard</li>
+            <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']" aria-current="page">Bahan</li>
           </ol>
-          <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
+          <h6 class="mb-0 font-bold capitalize">Bahan</h6>
         </nav>
 
         <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
@@ -237,148 +237,138 @@
 
     <!-- end Navbar -->
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 px-0 py-2 mx-6">
+    <!-- Main Code -->
 
-      <!-- Card 1 -->
-      <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
-        <div class="flex-auto p-4">
-          <div class="flex flex-wrap -mx-3">
-            <div class="flex-none w-2/3 max-w-full px-3">
-              <div>
-                <p class="mb-0 font-sans font-semibold leading-normal text-sm">Aktif</p>
-                <h5 class="mb-0 font-bold">
-                  244
-                  <span class="leading-normal text-sm font-weight-bolder text-indigo-500">Produk</span>
-                </h5>
-              </div>
-            </div>
-            <div class="w-4/12 max-w-full px-3 ml-auto text-right flex-0">
-              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl">
-                <i class="mdi--check text-xl relative top-3.5 text-white" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
-        <div class="flex-auto p-4">
-          <div class="flex flex-wrap -mx-3">
-            <div class="flex-none w-2/3 max-w-full px-3">
-              <div>
-                <p class="mb-0 font-sans font-semibold leading-normal text-sm">Stok Sedikit</p>
-                <h5 class="mb-0 font-bold">
-                  14
-                  <span class="leading-normal text-sm font-weight-bolder text-indigo-500">Produk</span>
-                </h5>
-              </div>
-            </div>
-            <div class="w-4/12 max-w-full px-3 ml-auto text-right flex-0">
-              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl">
-                <i class="mdi--warning-circle text-xl relative top-3.5 text-white" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="relative flex flex-col min-w-0 mb-6 break-words bg-white shadow-soft-xl rounded-2xl bg-clip-border">
-        <div class="flex-auto p-4">
-          <div class="flex flex-wrap -mx-3">
-            <div class="flex-none w-2/3 max-w-full px-3">
-              <div>
-                <p class="mb-0 font-sans font-semibold leading-normal text-sm">Stok Habis</p>
-                <h5 class="mb-0 font-bold">
-                  27
-                  <span class="leading-normal text-sm font-weight-bolder text-indigo-500">Produk</span>
-                </h5>
-              </div>
-            </div>
-            <div class="w-4/12 max-w-full px-3 ml-auto text-right flex-0">
-              <div class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-2xl">
-                <i class="mdi--cube-off-outline text-xl relative top-3.5 text-white" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <!-- Add product -->
+    <div class="flex flex-row justify-end px-10 py-2">
+      <button type="button" data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light" class="flex flex-row px-8 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="18" height="18" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M20 14h-6v6h-4v-6H4v-4h6V4h4v6h6z" />
+        </svg>
+        <p class="capitalize font-bold">Tambah Bahan</p>
+      </button>
     </div>
 
-    <!-- Produk Low Stock -->
-    <div class="px-10 py-2">
-      <div class="flex flex-row items-center justify-between mb-2">
-        <h2 class="pb-2">Produk Stok Rendah</h2>
-        <button type="button" data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light" class="flex flex-row px-8 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75">
-          <p class="capitalize font-bold">Lihat lainnya</p>
-        </button>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-
-        <div class="w-full max-w-full mb-6 md:w-fit md:flex-none xl:mb-0 xl:w-fit">
-          <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-            <div class="relative">
-              <a class="block shadow-xl rounded-2xl">
-                <img src="<?= base_url() ?>assets/img/laptop.jpg" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
-              </a>
+    <!-- Modal -->
+    <div data-twe-modal-init class="fixed left-0 top-0 z-[1055] hidden h-full w-full overflow-y-auto overflow-x-hidden outline-none" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div data-twe-modal-dialog-ref class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]">
+        <div class="relative w-auto m-2 transition-transform duration-300 pointer-events-none sm:m-7 sm:max-w-125 sm:mx-auto ease-soft-out -translate-y-13">
+          <div class="relative flex flex-col w-full bg-grey-100 border border-solid pointer-events-auto dark:bg-gray-950 bg-clip-padding border-black/20 rounded-xl outline-0">
+            <div class="flex items-center justify-between bg-white p-4 border-b border-solid shrink-0 border-slate-100 rounded-t-xl">
+              <h5 class="mb-0 leading-normal text-black" id="ModalLabel">Tambah Produk</h5>
+              <i class="ml-4 fas fa-upload"></i>
+              <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
             </div>
-            <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text">Kategori</p>
-              <a href="javascript:;">
-                <h5>Nama Produk</h5>
-              </a>
-              <p class="mb-6 leading-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio magni ipsam quibusdam sint aut.</p>
-              <div class="items-center justify-between">
-                <button type="button" class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-sky-500 text-sky-500 hover:border-sky-500 hover:bg-transparent hover:text-sky-500 hover:opacity-75 hover:shadow-none active:bg-sky-500 active:text-white active:hover:bg-transparent active:hover:text-sky-500">Edit Produk</button>
+            <!-- Form -->
+            <form action="">
+              <div class="relative flex-auto p-4 bg-white">
+                <div class="flex flex-col">
+                  <label for="inputNamaProduk">Nama Bahan</label>
+                  <input type="text" id="inputNamaBahan" class="py-2 px-3 bg-white">
+                </div>
               </div>
-            </div>
+              <div class="relative flex-auto p-4 bg-white">
+                <div class="flex flex-col">
+                  <label for="inputDeskProduk">Link Gambar Bahan</label>
+                  <input type="url" id="inputGambarBahan" class="py-2 px-3 bg-white">
+                </div>
+              </div>
+              <div class="relative flex-auto p-4 bg-white">
+                <div class="flex flex-col">
+                  <label for="inputHargaProduk">Jumlah Bahan</label>
+                  <input type="number" id="inputJumlahBahan" class="py-2 px-3 bg-white">
+                </div>
+              </div>
+              <div class="relative flex-auto p-4 bg-white">
+                <div class="flex flex-col">
+                  <label for="inputJumlahProduk">Asal Pemasok</label>
+                  <input type="text" id="inputAsalPemasok" class="py-2 px-3 bg-white">
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
+                <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
+                <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+              </div>
+            </form>
           </div>
         </div>
-
-        <div class="w-full max-w-full mb-6 md:w-fit md:flex-none xl:mb-0 xl:w-fit">
-          <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-            <div class="relative">
-              <a class="block shadow-xl rounded-2xl">
-                <img src="<?= base_url() ?>assets/img/laptop.jpg" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
-              </a>
-            </div>
-            <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text">Kategori</p>
-              <a href="javascript:;">
-                <h5>Nama Produk</h5>
-              </a>
-              <p class="mb-6 leading-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio magni ipsam quibusdam sint aut.</p>
-              <div class="items-center justify-between">
-                <button type="button" class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-sky-500 text-sky-500 hover:border-sky-500 hover:bg-transparent hover:text-sky-500 hover:opacity-75 hover:shadow-none active:bg-sky-500 active:text-white active:hover:bg-transparent active:hover:text-sky-500">Edit Produk</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="w-full max-w-full mb-6 md:w-fit md:flex-none xl:mb-0 xl:w-fit">
-          <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-            <div class="relative">
-              <a class="block shadow-xl rounded-2xl">
-                <img src="<?= base_url() ?>assets/img/laptop.jpg" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
-              </a>
-            </div>
-            <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text">Kategori</p>
-              <a href="javascript:;">
-                <h5>Nama Produk</h5>
-              </a>
-              <p class="mb-6 leading-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio magni ipsam quibusdam sint aut.</p>
-              <div class="items-center justify-between">
-                <button type="button" class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-sky-500 text-sky-500 hover:border-sky-500 hover:bg-transparent hover:text-sky-500 hover:opacity-75 hover:shadow-none active:bg-sky-500 active:text-white active:hover:bg-transparent active:hover:text-sky-500">Edit Produk</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
+    <!-- end  -->
+
+    <!-- Tabs -->
+    <!--Heads up! 👋Plugins: @tailwindcss/forms-->
+    <div x-data="{ activeTab: 1 }" class="px-10 py-4 sm:py-2">
+      <!-- Buttons -->
+      <div class="flex justify-start border-b border-gray-200">
+        <div role="tablist" class="-mb-px max-[480px]:max-w-[180px] inline-flex flex-wrap justify-center" @keydown.right.prevent.stop="$focus.wrap().next()" @keydown.left.prevent.stop="$focus.wrap().prev()" @keydown.home.prevent.stop="$focus.first()" @keydown.end.prevent.stop="$focus.last()">
+          <!-- Button #1 -->
+          <button id="tab-1" class="shrink-0 mr-4 border-b-2 px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700" :class="activeTab === 1 ? 'text-sky-900 border-sky-500' : 'text-sky-600 hover:text-sky-900'" :tabindex="activeTab === 1 ? 0 : -1" :aria-selected="activeTab === 1" aria-controls="tabpanel-1" @click="activeTab = 1" @focus="activeTab = 1">Aktif</button>
+          <!-- Button #2 -->
+          <button id="tab-2" class="shrink-0 border-b-2 px-1 pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700" :class="activeTab === 2 ? 'text-sky-900 border-sky-500' : 'text-sky-600 hover:text-sky-900'" :tabindex="activeTab === 2 ? 0 : -1" :aria-selected="activeTab === 2" aria-controls="tabpanel-2" @click="activeTab = 2" @focus="activeTab = 2">Tidak aktif</button>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <div x-cloak x-show="activeTab === 1" class="">
+          <div class="overflow-x-auto">
+            <table class="table text-slate-500">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Nama Bahan</th>
+                  <th>Jumlah Bahan</th>
+                  <th>Asal Pemasok</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php for ($i = 0; $i < 8; $i++) : ?>
+                  <!-- row -->
+                  <tr>
+                    <th><?= $i + 1 ?></th>
+                    <td>Kulit Buaya</td>
+                    <td>30</td>
+                    <td>PT. Tobe Fly</td>
+                    <td><a href="<?= base_url() ?>bahan/edit/G1713027468598VO">Edit</a></td>
+                  </tr>
+                <?php endfor; ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div x-cloak x-show="activeTab === 2">
+          <div class="overflow-x-auto">
+            <table class="table text-slate-500">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Nama Bahan</th>
+                  <th>Jumlah Bahan</th>
+                  <th>Asal Pemasok</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php for ($i = 0; $i < 3; $i++) : ?>
+                  <!-- row -->
+                  <tr>
+                    <th><?= $i + 1 ?></th>
+                    <td>Kulit Sintetis</td>
+                    <td>0</td>
+                    <td>PT. Sakit Hati</td>
+                    <td><a href="<?= base_url() ?>bahan/edit/G1713027468598VO">Edit</a></td>
+                  </tr>
+                <?php endfor; ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Tabs -->
+    <!-- End Main Code -->
 
     <!-- Footer -->
     <footer class="pt-4">

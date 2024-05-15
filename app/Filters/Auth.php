@@ -10,6 +10,7 @@ class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
+        // Memeriksa user sudah login atau belum
         if(!session()->get('logged_in')){
             echo "Login required";
             return redirect()->to(base_url('/login'));
@@ -18,6 +19,6 @@ class Auth implements FilterInterface
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)
     {
-        // do something
+        // lakukan sesuatu
     }
 }
