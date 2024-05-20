@@ -18,7 +18,7 @@
             <?php endif; ?>
         </div>
 
-        <form action="<?= base_url() ?>login/auth" method="post">
+        <form action="http://localhost:8080/login/auth" method="post">
             <div class="flex flex-col max-w-md space-y-3 mb-3">
                 <label for="InputForEmail" class="form-label text-slate-500">
                     Email Address

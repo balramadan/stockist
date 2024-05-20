@@ -258,47 +258,47 @@
                             <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
                         </div>
                         <!-- Form -->
-                        <form action="">
+                        <form action="<?= base_url('product/save') ?>" method="post">
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputNamaProduk">Nama Produk</label>
-                                    <input type="text" id="inputNamaProduk" class="py-2 px-3 bg-white">
+                                    <input type="text" name="Name" id="inputNamaProduk" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputKategoriProduk">Kategori Produk</label>
-                                    <input type="text" id="inputKategoriProduk" class="py-2 px-3 bg-white">
+                                    <input type="text" id="inputKategoriProduk" name="Kategori" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputDeskProduk">Deskripsi Produk</label>
-                                    <input type="text" id="inputDeskProduk" class="py-2 px-3 bg-white">
+                                    <input type="text" id="inputDeskProduk" name="Desk" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputDeskProduk">Link Gambar Produk</label>
-                                    <input type="url" id="inputGambarProduk" class="py-2 px-3 bg-white">
+                                    <input type="url" id="inputGambarProduk" name="Gambar" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
-                                    <label for="inputHargaProduk">Harga Produk</label>
-                                    <input type="text" id="inputHargaProduk" class="py-2 px-3 bg-white">
+                                    <label for="inputJumlahProduk">Harga Produk</label>
+                                    <input type="number" id="inputJumlahProduk" name="Harga" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputJumlahProduk">Jumlah Produk</label>
-                                    <input type="number" id="inputJumlahProduk" class="py-2 px-3 bg-white">
+                                    <input type="number" id="inputJumlahProduk" name="Jumlah" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
                                 <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
-                                <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
-                            </div>
+                                <button type="submit" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+                            </div> 
                         </form>
                     </div>
                 </div>
@@ -327,42 +327,53 @@
                         <div class="text-center justify-center">Harga Satuan</div>
                         <div class="text-right justify-end">Edit</div>
                     </div>
+                    
                     <div class="py-2">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-3">
-                            <?php for($i = 0; $i < 10; $i++): ?>
+                        <?php
+                    foreach ($products_active as $active) {
+                        $dataAdmin = [
+                            'name' => $active['name'],
+                            'price' => $active['price'],
+                            'amount' => $active['amount'],
+                            'description' => $active['description'],
+                            'image' => $active['image'],
+                            'category' => $active['category'],
+                        ];
+                    ?>
                             <!-- Produk 1 -->
                             <!-- Tampilan jika layar di Desktop -->
                             <div class="text-left hidden lg:block justify-start">
-                                <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
                                 <p class="text-xs">#G1713027468598VO</p>
-                                <p class="text-xs">Category</p>
+                                <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                             </div>
                             <!-- Tampilan jika di Layar Mobile -->
                             <div class="block lg:hidden text-left justify-start">
                                 <div class="">
-                                    <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                    <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
                                     <p class="text-xs">#G1713027468598VO</p>
-                                    <p class="text-xs">Category</p>
+                                    <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
                                 <div class="flex flex-row gap-4 mt-2 text-sm">
                                     <p>Stok</p>
                                     <p>:</p>
-                                    <span class="">50</span>
+                                    <span class=""><?= $dataAdmin['amount'] ?></span>
                                 </div>
                                 <div class="flex flex-row gap-4 mt-2 text-sm">
                                     <p>Harga satuan</p>
                                     <p>:</p>
-                                    <span class="">15.900</span>
+                                    <span class=""><?= $dataAdmin['price'] ?></span>
                                 </div>
                             </div>
                             <div class="text-center hidden lg:block justify-center">
-                                <p>50</p>
+                                <p><?= $dataAdmin['amount'] ?></p>
                             </div>
                             <div class="text-center hidden lg:block justify-center">
-                                <p>15.900</p>
+                                <p><?= $dataAdmin['price'] ?></p>
                             </div>
                             <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
-                            <?php endfor; ?>
+                            <?php }; ?>
                         </div>
                     </div>
                 </div>
@@ -375,39 +386,50 @@
                     </div>
                     <div class="py-2">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-3">
-                            <?php for($i = 0; $i < 5; $i++): ?>
+                        <?php
+                    foreach ($products as $product) {
+                        $dataAdmin = [
+                            'name' => $product['name'],
+                            'price' => $product['price'],
+                            'amount' => $product['amount'],
+                            'description' => $product['description'],
+                            'image' => $product['image'],
+                            'category' => $product['category'],
+                        ];
+
+                    ?>
                             <!-- Tampilan jika layar Desktop -->
                             <div class="text-left hidden lg:block justify-start">
-                                <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
                                 <p class="text-xs">#G1713027468598VO</p>
-                                <p class="text-xs">Category</p>
+                                <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                             </div>
                             <!-- Tampilan jika Layar Mobile -->
                             <div class="block lg:hidden text-left justify-start">
                                 <div class="">
-                                    <h3 class="text-base">[Pet Simulator X] 10M Gems</h3>
+                                    <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
                                     <p class="text-xs">#G1713027468598VO</p>
-                                    <p class="text-xs">Category</p>
+                                    <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
                                 <div class="flex flex-row gap-4 mt-2 text-sm">
                                     <p>Stok</p>
                                     <p>:</p>
-                                    <span class="">0</span>
+                                    <span class=""><?= $dataAdmin['amount'] ?></span>
                                 </div>
                                 <div class="flex flex-row gap-4 mt-2 text-sm">
                                     <p>Harga satuan</p>
                                     <p>:</p>
-                                    <span class="">15.900</span>
+                                    <span class=""><?= $dataAdmin['price'] ?></span>
                                 </div>
                             </div>
                             <div class="text-center hidden lg:block justify-center">
-                                <p>0</p>
+                                <p><?= $dataAdmin['amount'] ?></p>
                             </div>
                             <div class="text-center hidden lg:block justify-center">
-                                <p>15.900</p>
+                                <p><?= $dataAdmin['price'] ?></p>
                             </div>
                             <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
-                            <?php endfor; ?>
+                            <?php }; ?>
                         </div>
                     </div>
                 </div>

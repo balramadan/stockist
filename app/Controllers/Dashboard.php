@@ -8,6 +8,10 @@ class Dashboard extends BaseController
 {
     public function index()
     {
+        if(!session()->get('logged_in')){
+            echo "Login required";
+            return redirect()->to(base_url('/login'));
+        }
         $data = [
             'judul' => 'Dashboard'
         ];
@@ -18,10 +22,25 @@ class Dashboard extends BaseController
 
     public function admin()
     {
-        $model = new ModelUser;
+        if(!session()->get('logged_in')){
+            echo "Login required";
+            return redirect()->to(base_url('/login'));
+        }
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, [
+            CURLOPT_URL => 'https://stockis.vercel.app/api/admin',
+            CURLOPT_RETURNTRANSFER => true
+        ]);
+
+        $response = curl_exec($curl);
+        curl_close($curl);
+        $data = json_decode($response, true);
+        $res = $data['data'];
         $data = [
             'judul' => 'Admin List',
-            'users' => $model->getUser(),
+            'users' => $res
         ];
 
         echo view('templates/header', $data);
