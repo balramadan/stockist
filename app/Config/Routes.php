@@ -21,24 +21,29 @@ $routes->get('/admin', 'Dashboard::admin');
 
 // Produk
 $routes->get('/produk', 'Product::index');
-$routes->get('/produk/get', 'Product::getApi');
-$routes->get('/produk/post', 'Product::postApi');
+
 
 $routes->post('/product/save', 'Product::save');
 
 
 // Edit Produk
 $routes->get('/produk/edit/(:alphanum)', 'Product::edit/$1');
-
+$routes->post('/product/update', 'Product::update');
 // Bahan
 $routes->get('/bahan', 'Material::index');
 
+// Updated material post data
+$routes->post('/bahan/up', 'Material::updated');
+
 // Edit Bahan
-$routes->get('/bahan/edit/(:alphanum)', 'Material::edit/$1', ['filter' => 'auth']);
+$routes->get('/bahan/edit/(:alphanum)/(:alphanum)', 'Material::edit/$1/$2');
+
+// post bahan
+$routes->post('/bahan/add', 'Material::save');
 
 // Profile
-$routes->get('/profile', 'Profile::index', ['filter' => 'auth']);
-
+$routes->get('/profile', 'Profile::index');
+$routes->post('/profile/updated', 'Profile::Updated');
 // $routes->setAutoRoute(true);
 
 // api router

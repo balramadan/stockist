@@ -259,34 +259,28 @@
               <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
             </div>
             <!-- Form -->
-            <form action="">
+            <form action="<?= base_url('bahan/add')?>" method="post">
               <div class="relative flex-auto p-4 bg-white">
                 <div class="flex flex-col">
                   <label for="inputNamaProduk">Nama Bahan</label>
-                  <input type="text" id="inputNamaBahan" class="py-2 px-3 bg-white">
-                </div>
-              </div>
-              <div class="relative flex-auto p-4 bg-white">
-                <div class="flex flex-col">
-                  <label for="inputDeskProduk">Link Gambar Bahan</label>
-                  <input type="url" id="inputGambarBahan" class="py-2 px-3 bg-white">
+                  <input type="text" id="inputNamaBahan" name="bahan" class="py-2 px-3 bg-white">
                 </div>
               </div>
               <div class="relative flex-auto p-4 bg-white">
                 <div class="flex flex-col">
                   <label for="inputHargaProduk">Jumlah Bahan</label>
-                  <input type="number" id="inputJumlahBahan" class="py-2 px-3 bg-white">
+                  <input type="number" id="inputJumlahBahan" name="amount" class="py-2 px-3 bg-white">
                 </div>
               </div>
               <div class="relative flex-auto p-4 bg-white">
                 <div class="flex flex-col">
                   <label for="inputJumlahProduk">Asal Pemasok</label>
-                  <input type="text" id="inputAsalPemasok" class="py-2 px-3 bg-white">
+                  <input type="text" id="inputAsalPemasok" name="supplier" class="py-2 px-3 bg-white">
                 </div>
               </div>
               <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
                 <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
-                <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+                <button type="submit" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
               </div>
             </form>
           </div>
@@ -323,16 +317,26 @@
                 </tr>
               </thead>
               <tbody>
-                <?php for ($i = 0; $i < 8; $i++) : ?>
+                <?php
+                $i = 0;
+                foreach ($material as $active) {
+                  $datamaterial = [
+                    'name' => $active['nm'],
+                    'name_sup' => $active['ns'],
+                    'amount' => $active['amount'],
+                    'id' => $active['nickid'],
+                    'sup_id' => $active['supid']
+                  ]
+                ?>
                   <!-- row -->
                   <tr>
                     <th><?= $i + 1 ?></th>
-                    <td>Kulit Buaya</td>
-                    <td>30</td>
-                    <td>PT. Tobe Fly</td>
-                    <td><a href="<?= base_url() ?>bahan/edit/G1713027468598VO">Edit</a></td>
+                    <td><?= $datamaterial['name'] ?></td>
+                    <td><?= $datamaterial['amount'] ?></td>
+                    <td><?= $datamaterial['name_sup'] ?></td>
+                    <td><a href="<?= base_url() ?>bahan/edit/<?= $datamaterial['id'] ?>/<?= $datamaterial['sup_id'] ?>">Edit</a></td>
                   </tr>
-                <?php endfor; ?>
+                <?php }; ?>
               </tbody>
             </table>
           </div>
@@ -351,16 +355,25 @@
                 </tr>
               </thead>
               <tbody>
-                <?php for ($i = 0; $i < 3; $i++) : ?>
+                <?php
+                $i = 0;
+                foreach ($non as $active) {
+                  $datamaterial = [
+                    'name' => $active['nm'],
+                    'name_sup' => $active['ns'],
+                    'amount' => $active['amount'],
+                    'id' => $active['nickid']
+                  ]
+                ?>
                   <!-- row -->
                   <tr>
                     <th><?= $i + 1 ?></th>
-                    <td>Kulit Sintetis</td>
-                    <td>0</td>
-                    <td>PT. Sakit Hati</td>
-                    <td><a href="<?= base_url() ?>bahan/edit/G1713027468598VO">Edit</a></td>
+                    <td><?= $datamaterial['name'] ?></td>
+                    <td><?= $datamaterial['amount'] ?></td>
+                    <td><?= $datamaterial['name_sup'] ?></td>
+                    <td><a href="<?= base_url() ?>bahan/edit/<?= $datamaterial['id'] ?>/<?= $datamaterial['name_sup'] ?>">Edit</a></td>
                   </tr>
-                <?php endfor; ?>
+                <?php }; ?>
               </tbody>
             </table>
           </div>

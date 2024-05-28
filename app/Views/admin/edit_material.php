@@ -238,34 +238,29 @@
         <!-- end Navbar -->
 
         <div x-cloak class="relative flex flex-col w-full bg-transparent pointer-events-auto px-10 py-2">
-            <form action="">
+            <form action="<?= base_url('bahan/up')?>" method="post">
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputNamaBahan">Nama Bahan</label>
-                        <input type="text" id="inputNamaBahan" class="py-2 px-3 bg-white text-black">
-                    </div>
-                </div>
-                <div class="relative flex-auto">
-                    <div class="flex flex-col">
-                        <label for="inputDeskBahan">Link Gambar Bahan</label>
-                        <input type="url" id="inputDeskBahan" class="py-2 px-3 bg-white text-black">
+                        <input type="text" name="bahan" id="inputNamaBahan" value="<?= $result['nm'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputJumlahBahan">Jumlah Bahan</label>
-                        <input type="number" id="inputJumlahBahan" class="py-2 px-3 bg-white text-black">
+                        <input type="number" name="amount" id="inputJumlahBahan" value="<?= $result['amount'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputKategoriBahan">Asal Pemasok</label>
-                        <input type="text" id="inputKategoriBahan" class="py-2 px-3 bg-white text-black">
+                        <input type="text" name="supplier" id="inputKategoriBahan" value="<?= $result['ns'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
+                <input type="hidden" name="id" value="<?= $result['id'] ?>">
                 <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
                     <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
-                    <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+                    <button type="submit" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
                 </div>
             </form>
         </div>
