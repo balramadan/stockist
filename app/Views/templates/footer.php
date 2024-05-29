@@ -4,16 +4,11 @@
 <script src="<?= base_url() ?>assets/js/dropdown.js"></script>
 <script src="<?= base_url() ?>assets/js/fixed-plugin.js"></script>
 <script src="<?= base_url() ?>assets/js/nav-pills.js"></script>
-<script src="<?= base_url() ?>assets/js/navbar-collapse.js"></script>
 <script src="<?= base_url() ?>assets/js/navbar-sticky.js"></script>
-<script src="<?= base_url() ?>assets/js/perfect-scrollbar.js"></script>
 <script src="<?= base_url() ?>assets/js/sidenav-burger.js"></script>
 <script src="<?= base_url() ?>assets/js/tooltips.js"></script>
-<script src="<?= base_url() ?>assets/js/chart-1.js"></script>
-<script src="<?= base_url() ?>assets/js/chart-2.js"></script>
 <script src="<?= base_url() ?>assets/js/plugins/perfect-scrollbar.min.js"></script>
 <script src="<?= base_url() ?>assets/js/plugins/chartjs.min.js"></script>
-<script src="<?= base_url() ?>assets/js/plugins/Chart.extension.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
 <script src="<?= base_url() ?>assets/js/main.js"></script>

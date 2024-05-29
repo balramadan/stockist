@@ -8,6 +8,10 @@ class Login extends BaseController
 {
     public function index()
     {
+        if (session()->get('logged_in')) {
+            echo "Login required";
+            return redirect()->to(base_url('/'));
+        }
         helper(['form']);
         $data = [
             'judul' => 'Login'

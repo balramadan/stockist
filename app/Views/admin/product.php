@@ -236,7 +236,7 @@
         </nav>
 
         <!-- end Navbar -->
-        
+
         <!-- Main Code -->
         <!-- Add product -->
         <div class="flex flex-row justify-end px-10 py-2">
@@ -298,7 +298,7 @@
                             <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
                                 <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
                                 <button type="submit" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
-                            </div> 
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -327,53 +327,53 @@
                         <div class="text-center justify-center">Harga Satuan</div>
                         <div class="text-right justify-end">Edit</div>
                     </div>
-                    
+
                     <div class="py-2">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-3">
-                        <?php
-                    foreach ($products_active as $active) {
-                        $dataAdmin = [
-                            'name' => $active['name'],
-                            'price' => $active['price'],
-                            'amount' => $active['amount'],
-                            'description' => $active['description'],
-                            'image' => $active['image'],
-                            'category' => $active['category'],
-                            'product_id' => $active['uuid'],
-                        ];
-                    ?>
-                            <!-- Produk 1 -->
-                            <!-- Tampilan jika layar di Desktop -->
-                            <div class="text-left hidden lg:block justify-start">
-                                <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
-                                <p class="text-xs"><?= $dataAdmin['category'] ?></p>
-                            </div>
-                            <!-- Tampilan jika di Layar Mobile -->
-                            <div class="block lg:hidden text-left justify-start">
-                                <div class="">
+                            <?php
+                            foreach ($products_active as $active) {
+                                $dataAdmin = [
+                                    'name' => $active['name'],
+                                    'price' => $active['price'],
+                                    'amount' => $active['amount'],
+                                    'description' => $active['description'],
+                                    'image' => $active['image'],
+                                    'category' => $active['category'],
+                                    'product_id' => $active['uuid'],
+                                ];
+                            ?>
+                                <!-- Produk 1 -->
+                                <!-- Tampilan jika layar di Desktop -->
+                                <div class="text-left hidden lg:block justify-start">
                                     <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
                                     <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
                                     <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Stok</p>
-                                    <p>:</p>
-                                    <span class=""><?= $dataAdmin['amount'] ?></span>
+                                <!-- Tampilan jika di Layar Mobile -->
+                                <div class="block lg:hidden text-left justify-start">
+                                    <div class="">
+                                        <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
+                                        <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
+                                        <p class="text-xs"><?= $dataAdmin['category'] ?></p>
+                                    </div>
+                                    <div class="flex flex-row gap-4 mt-2 text-sm">
+                                        <p>Stok</p>
+                                        <p>:</p>
+                                        <span class=""><?= $dataAdmin['amount'] ?></span>
+                                    </div>
+                                    <div class="flex flex-row gap-4 mt-2 text-sm">
+                                        <p>Harga satuan</p>
+                                        <p>:</p>
+                                        <span class=""><?= $dataAdmin['price'] ?></span>
+                                    </div>
                                 </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Harga satuan</p>
-                                    <p>:</p>
-                                    <span class=""><?= $dataAdmin['price'] ?></span>
+                                <div class="text-center hidden lg:block justify-center">
+                                    <p><?= $dataAdmin['amount'] ?></p>
                                 </div>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p><?= $dataAdmin['amount'] ?></p>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p><?= $dataAdmin['price'] ?></p>
-                            </div>
-                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
+                                <div class="text-center hidden lg:block justify-center">
+                                    <p><?= $dataAdmin['price'] ?></p>
+                                </div>
+                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
                             <?php }; ?>
                         </div>
                     </div>
@@ -387,50 +387,50 @@
                     </div>
                     <div class="py-2">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 justify-between py-3">
-                        <?php
-                    foreach ($products as $product) {
-                        $dataAdmin = [
-                            'name' => $product['name'],
-                            'price' => $product['price'],
-                            'amount' => $product['amount'],
-                            'description' => $product['description'],
-                            'image' => $product['image'],
-                            'category' => $product['category'],
-                            'product_id' => $product['uuid'],
-                        ];
+                            <?php
+                            foreach ($products as $product) {
+                                $dataAdmin = [
+                                    'name' => $product['name'],
+                                    'price' => $product['price'],
+                                    'amount' => $product['amount'],
+                                    'description' => $product['description'],
+                                    'image' => $product['image'],
+                                    'category' => $product['category'],
+                                    'product_id' => $product['uuid'],
+                                ];
 
-                    ?>
-                            <!-- Tampilan jika layar Desktop -->
-                            <div class="text-left hidden lg:block justify-start">
-                                <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
-                                <p class="text-xs"><?= $dataAdmin['category'] ?></p>
-                            </div>
-                            <!-- Tampilan jika Layar Mobile -->
-                            <div class="block lg:hidden text-left justify-start">
-                                <div class="">
+                            ?>
+                                <!-- Tampilan jika layar Desktop -->
+                                <div class="text-left hidden lg:block justify-start">
                                     <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
                                     <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
                                     <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Stok</p>
-                                    <p>:</p>
-                                    <span class=""><?= $dataAdmin['amount'] ?></span>
+                                <!-- Tampilan jika Layar Mobile -->
+                                <div class="block lg:hidden text-left justify-start">
+                                    <div class="">
+                                        <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
+                                        <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
+                                        <p class="text-xs"><?= $dataAdmin['category'] ?></p>
+                                    </div>
+                                    <div class="flex flex-row gap-4 mt-2 text-sm">
+                                        <p>Stok</p>
+                                        <p>:</p>
+                                        <span class=""><?= $dataAdmin['amount'] ?></span>
+                                    </div>
+                                    <div class="flex flex-row gap-4 mt-2 text-sm">
+                                        <p>Harga satuan</p>
+                                        <p>:</p>
+                                        <span class=""><?= $dataAdmin['price'] ?></span>
+                                    </div>
                                 </div>
-                                <div class="flex flex-row gap-4 mt-2 text-sm">
-                                    <p>Harga satuan</p>
-                                    <p>:</p>
-                                    <span class=""><?= $dataAdmin['price'] ?></span>
+                                <div class="text-center hidden lg:block justify-center">
+                                    <p><?= $dataAdmin['amount'] ?></p>
                                 </div>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p><?= $dataAdmin['amount'] ?></p>
-                            </div>
-                            <div class="text-center hidden lg:block justify-center">
-                                <p><?= $dataAdmin['price'] ?></p>
-                            </div>
-                            <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
+                                <div class="text-center hidden lg:block justify-center">
+                                    <p><?= $dataAdmin['price'] ?></p>
+                                </div>
+                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
                             <?php }; ?>
                         </div>
                     </div>
@@ -476,33 +476,4 @@
     </main>
     <!-- Akhir Main -->
 
-
-    <!-- Script -->
-    <script>
-        // Input Harga di Tambah Produk
-        var rupiah = document.getElementById("inputHargaProduk");
-        rupiah.addEventListener("keyup", function(e) {
-            // tambahkan 'Rp.' pada saat form di ketik
-            // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
-            rupiah.value = formatRupiah(this.value, "Rp. ");
-        });
-
-        /* Fungsi formatRupiah */
-        function formatRupiah(angka, prefix) {
-            var number_string = angka.replace(/[^,\d]/g, "").toString(),
-                split = number_string.split(","),
-                sisa = split[0].length % 3,
-                rupiah = split[0].substr(0, sisa),
-                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-
-            // tambahkan titik jika yang di input sudah menjadi angka ribuan
-            if (ribuan) {
-                separator = sisa ? "." : "";
-                rupiah += separator + ribuan.join(".");
-            }
-
-            rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-            return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
-        }
-    </script>
 </body>

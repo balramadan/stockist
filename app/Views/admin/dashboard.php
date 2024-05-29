@@ -318,13 +318,13 @@
           <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="relative">
               <a class="block shadow-xl rounded-2xl">
-                <img src="<?= $dikitproduct[0]["image"]?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
+                <img src="<?= $dikitproduct[0]["image"] ?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
               </a>
             </div>
             <div class="flex-auto px-1 pt-6 mx-4 mb-4">
               <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[0]['category'] ?></p>
-              <a href="javascript:;">
-                <h5><?= $dikitproduct[0]["name"]?></h5>
+              <a href="<?= base_url() ?>produk">
+                <h5><?= $dikitproduct[0]["name"] ?></h5>
               </a>
               <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[0]["description"] ?></p>
             </div>
@@ -335,15 +335,15 @@
           <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="relative">
               <a class="block shadow-xl rounded-2xl">
-                <img src="<?= $dikitproduct[1]["image"]?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
+                <img src="<?= $dikitproduct[1]["image"] ?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
               </a>
             </div>
             <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[1]["category"]?></p>
-              <a href="javascript:;">
-                <h5><?= $dikitproduct[1]["name"]?></h5>
+              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[1]["category"] ?></p>
+              <a href="<?= base_url() ?>produk">
+                <h5><?= $dikitproduct[1]["name"] ?></h5>
               </a>
-              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[1]["description"]?></p>
+              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[1]["description"] ?></p>
             </div>
           </div>
         </div>
@@ -352,15 +352,15 @@
           <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="relative">
               <a class="block shadow-xl rounded-2xl">
-                <img src="<?= $dikitproduct[2]["image"]?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
+                <img src="<?= $dikitproduct[2]["image"] ?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
               </a>
             </div>
             <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[2]["category"]?></p>
-              <a href="javascript:;">
-                <h5><?= $dikitproduct[2]["name"]?></h5>
+              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[2]["category"] ?></p>
+              <a href="<?= base_url() ?>produk">
+                <h5><?= $dikitproduct[2]["name"] ?></h5>
               </a>
-              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[2]["description"]?></p>
+              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[2]["description"] ?></p>
             </div>
           </div>
         </div>

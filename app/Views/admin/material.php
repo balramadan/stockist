@@ -326,11 +326,11 @@
                     'amount' => $active['amount'],
                     'id' => $active['nickid'],
                     'sup_id' => $active['supid']
-                  ]
+                  ];
                 ?>
                   <!-- row -->
                   <tr>
-                    <th><?= $i + 1 ?></th>
+                    <th><?= $i += 1; ?></th>
                     <td><?= $datamaterial['name'] ?></td>
                     <td><?= $datamaterial['amount'] ?></td>
                     <td><?= $datamaterial['name_sup'] ?></td>
@@ -367,7 +367,7 @@
                 ?>
                   <!-- row -->
                   <tr>
-                    <th><?= $i + 1 ?></th>
+                    <th><?= $i += 1 ?></th>
                     <td><?= $datamaterial['name'] ?></td>
                     <td><?= $datamaterial['amount'] ?></td>
                     <td><?= $datamaterial['name_sup'] ?></td>

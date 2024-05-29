@@ -2,6 +2,7 @@
 <html lang="en" class="bg-white">
 
 <head>
+    <link rel="shortcut icon" href="<?= base_url() ?>assets/img/logos/logo.svg" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
