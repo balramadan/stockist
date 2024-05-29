@@ -339,20 +339,21 @@
                                     'description' => $active['description'],
                                     'image' => $active['image'],
                                     'category' => $active['category'],
+                                    'product_id' => $active['uuid'],
                                 ];
                             ?>
                                 <!-- Produk 1 -->
                                 <!-- Tampilan jika layar di Desktop -->
                                 <div class="text-left hidden lg:block justify-start">
                                     <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                    <p class="text-xs">#G1713027468598VO</p>
+                                    <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
                                     <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
                                 <!-- Tampilan jika di Layar Mobile -->
                                 <div class="block lg:hidden text-left justify-start">
                                     <div class="">
                                         <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                        <p class="text-xs">#G1713027468598VO</p>
+                                        <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
                                         <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                     </div>
                                     <div class="flex flex-row gap-4 mt-2 text-sm">
@@ -372,7 +373,7 @@
                                 <div class="text-center hidden lg:block justify-center">
                                     <p><?= $dataAdmin['price'] ?></p>
                                 </div>
-                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
+                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
                             <?php }; ?>
                         </div>
                     </div>
@@ -395,20 +396,21 @@
                                     'description' => $product['description'],
                                     'image' => $product['image'],
                                     'category' => $product['category'],
+                                    'product_id' => $product['uuid'],
                                 ];
 
                             ?>
                                 <!-- Tampilan jika layar Desktop -->
                                 <div class="text-left hidden lg:block justify-start">
                                     <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                    <p class="text-xs">#G1713027468598VO</p>
+                                    <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
                                     <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
                                 <!-- Tampilan jika Layar Mobile -->
                                 <div class="block lg:hidden text-left justify-start">
                                     <div class="">
                                         <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                        <p class="text-xs">#G1713027468598VO</p>
+                                        <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
                                         <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                     </div>
                                     <div class="flex flex-row gap-4 mt-2 text-sm">
@@ -428,7 +430,7 @@
                                 <div class="text-center hidden lg:block justify-center">
                                     <p><?= $dataAdmin['price'] ?></p>
                                 </div>
-                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/G1713027468598VO">Edit</a></div>
+                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
                             <?php }; ?>
                         </div>
                     </div>
@@ -474,33 +476,4 @@
     </main>
     <!-- Akhir Main -->
 
-
-    <!-- Script -->
-    <script>
-        // Input Harga di Tambah Produk
-        var rupiah = document.getElementById("inputHargaProduk");
-        rupiah.addEventListener("keyup", function(e) {
-            // tambahkan 'Rp.' pada saat form di ketik
-            // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
-            rupiah.value = formatRupiah(this.value, "Rp. ");
-        });
-
-        /* Fungsi formatRupiah */
-        function formatRupiah(angka, prefix) {
-            var number_string = angka.replace(/[^,\d]/g, "").toString(),
-                split = number_string.split(","),
-                sisa = split[0].length % 3,
-                rupiah = split[0].substr(0, sisa),
-                ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-
-            // tambahkan titik jika yang di input sudah menjadi angka ribuan
-            if (ribuan) {
-                separator = sisa ? "." : "";
-                rupiah += separator + ribuan.join(".");
-            }
-
-            rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-            return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
-        }
-    </script>
 </body>

@@ -1,4 +1,8 @@
-<?php $session = session(); ?>
+<?php
+
+use App\Controllers\Product;
+
+ $session = session(); ?>
 
 <body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
     <!-- sidenav  -->
@@ -238,46 +242,47 @@
         <!-- end Navbar -->
 
         <div x-cloak class="relative flex flex-col w-full bg-transparent pointer-events-auto px-10 py-2">
-            <form action="">
+            <form action="<?= base_url('product/update')?>" method="POST">
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputNamaProduk">Nama Produk</label>
-                        <input type="text" id="inputNamaProduk" class="py-2 px-3 bg-white text-black">
+                        <input type="text" name="name" id="inputNamaProduk" value="<?= $product['name'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputKategoriProduk">Kategori Produk</label>
-                        <input type="text" id="inputKategoriProduk" class="py-2 px-3 bg-white text-black">
+                        <input type="text" name="category" id="inputKategoriProduk" value="<?= $product['category'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputDeskProduk">Deskripsi Produk</label>
-                        <input type="text" id="inputDeskProduk" class="py-2 px-3 bg-white text-black">
+                        <input type="text" name="description" id="inputDeskProduk" value="<?= $product['description'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputDeskProduk">Link Gambar Produk</label>
-                        <input type="url" id="inputDeskProduk" class="py-2 px-3 bg-white text-black">
+                        <input type="url" name="image" id="inputDeskProduk" value="<?= $product['image'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputHargaProduk">Harga Produk</label>
-                        <input type="text" id="inputHargaProduk" class="py-2 px-3 bg-white text-black">
+                        <input type="number" name="price" id="inputJumlahProduk" value="<?= $product['price'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
                 <div class="relative flex-auto">
                     <div class="flex flex-col">
                         <label for="inputJumlahProduk">Jumlah Produk</label>
-                        <input type="number" id="inputJumlahProduk" class="py-2 px-3 bg-white text-black">
+                        <input type="number" name="amount" id="inputJumlahProduk" value="<?= $product['amount'] ?>" class="py-2 px-3 bg-white text-black">
                     </div>
                 </div>
+                <input type="hidden" name="productid" value="<?= $product['uuid'] ?>">
                 <div class="flex flex-wrap items-center justify-end p-3 bg-white border-t border-solid shrink-0 border-slate-100 rounded-b-xl">
-                    <button type="button" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</button>
-                    <button type="button" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
+                    <a href="<?= base_url() ?>produk" data-twe-modal-dismiss data-twe-ripple-init data-twe-ripple-color="light" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-slate-600 to-slate-300 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Close</a>
+                    <button type="submit" data-toggle="modal" data-target="#import" class="inline-block px-8 py-2 m-1 mb-4 text-xs font-bold text-center text-white uppercase align-middle transition-all border-0 rounded-lg cursor-pointer ease-soft-in leading-pro tracking-tight-soft bg-gradient-to-tl from-sky-700 to-indigo-500 shadow-soft-md bg-150 bg-x-25 hover:scale-102 active:opacity-85">Upload</button>
                 </div>
             </form>
         </div>

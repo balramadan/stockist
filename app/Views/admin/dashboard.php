@@ -247,7 +247,7 @@
               <div>
                 <p class="mb-0 font-sans font-semibold leading-normal text-sm">Aktif</p>
                 <h5 class="mb-0 font-bold">
-                  244
+                  <?= $banyak ?>
                   <span class="leading-normal text-sm font-weight-bolder text-indigo-500">Produk</span>
                 </h5>
               </div>
@@ -269,7 +269,7 @@
               <div>
                 <p class="mb-0 font-sans font-semibold leading-normal text-sm">Stok Sedikit</p>
                 <h5 class="mb-0 font-bold">
-                  14
+                  <?= $dikit ?>
                   <span class="leading-normal text-sm font-weight-bolder text-indigo-500">Produk</span>
                 </h5>
               </div>
@@ -291,7 +291,7 @@
               <div>
                 <p class="mb-0 font-sans font-semibold leading-normal text-sm">Stok Habis</p>
                 <h5 class="mb-0 font-bold">
-                  27
+                  <?= $non ?>
                   <span class="leading-normal text-sm font-weight-bolder text-indigo-500">Produk</span>
                 </h5>
               </div>
@@ -311,9 +311,6 @@
     <div class="px-10 py-2">
       <div class="flex flex-row items-center justify-between mb-2">
         <h2 class="pb-2">Produk Stok Rendah</h2>
-        <button type="button" data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light" class="flex flex-row px-8 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75">
-          <p class="capitalize font-bold">Lihat lainnya</p>
-        </button>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
@@ -321,18 +318,15 @@
           <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="relative">
               <a class="block shadow-xl rounded-2xl">
-                <img src="<?= base_url() ?>assets/img/laptop.jpg" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
+                <img src="<?= $dikitproduct[0]["image"] ?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
               </a>
             </div>
             <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text">Kategori</p>
-              <a href="javascript:;">
-                <h5>Nama Produk</h5>
+              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[0]['category'] ?></p>
+              <a href="<?= base_url() ?>produk">
+                <h5><?= $dikitproduct[0]["name"] ?></h5>
               </a>
-              <p class="mb-6 leading-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio magni ipsam quibusdam sint aut.</p>
-              <div class="items-center justify-between">
-                <button type="button" class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-sky-500 text-sky-500 hover:border-sky-500 hover:bg-transparent hover:text-sky-500 hover:opacity-75 hover:shadow-none active:bg-sky-500 active:text-white active:hover:bg-transparent active:hover:text-sky-500">Edit Produk</button>
-              </div>
+              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[0]["description"] ?></p>
             </div>
           </div>
         </div>
@@ -341,18 +335,15 @@
           <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="relative">
               <a class="block shadow-xl rounded-2xl">
-                <img src="<?= base_url() ?>assets/img/laptop.jpg" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
+                <img src="<?= $dikitproduct[1]["image"] ?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
               </a>
             </div>
             <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text">Kategori</p>
-              <a href="javascript:;">
-                <h5>Nama Produk</h5>
+              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[1]["category"] ?></p>
+              <a href="<?= base_url() ?>produk">
+                <h5><?= $dikitproduct[1]["name"] ?></h5>
               </a>
-              <p class="mb-6 leading-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio magni ipsam quibusdam sint aut.</p>
-              <div class="items-center justify-between">
-                <button type="button" class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-sky-500 text-sky-500 hover:border-sky-500 hover:bg-transparent hover:text-sky-500 hover:opacity-75 hover:shadow-none active:bg-sky-500 active:text-white active:hover:bg-transparent active:hover:text-sky-500">Edit Produk</button>
-              </div>
+              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[1]["description"] ?></p>
             </div>
           </div>
         </div>
@@ -361,18 +352,15 @@
           <div class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
             <div class="relative">
               <a class="block shadow-xl rounded-2xl">
-                <img src="<?= base_url() ?>assets/img/laptop.jpg" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
+                <img src="<?= $dikitproduct[2]["image"] ?>" alt="img-blur-shadow" class="object-cover max-h-36 sm:max-h-48 w-full shadow-soft-2xl rounded-2xl" />
               </a>
             </div>
             <div class="flex-auto px-1 pt-6 mx-4 mb-4">
-              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text">Kategori</p>
-              <a href="javascript:;">
-                <h5>Nama Produk</h5>
+              <p class="relative z-10 mb-2 leading-normal text-transparent bg-gradient-to-tl from-gray-900 to-slate-800 text-sm bg-clip-text"><?= $dikitproduct[2]["category"] ?></p>
+              <a href="<?= base_url() ?>produk">
+                <h5><?= $dikitproduct[2]["name"] ?></h5>
               </a>
-              <p class="mb-6 leading-normal text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque odio magni ipsam quibusdam sint aut.</p>
-              <div class="items-center justify-between">
-                <button type="button" class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-sky-500 text-sky-500 hover:border-sky-500 hover:bg-transparent hover:text-sky-500 hover:opacity-75 hover:shadow-none active:bg-sky-500 active:text-white active:hover:bg-transparent active:hover:text-sky-500">Edit Produk</button>
-              </div>
+              <p class="mb-6 leading-normal text-sm"><?= $dikitproduct[2]["description"] ?></p>
             </div>
           </div>
         </div>

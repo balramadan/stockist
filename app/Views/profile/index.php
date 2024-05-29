@@ -288,11 +288,11 @@
                             <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
                         </div>
                         <!-- Form -->
-                        <form action="<?= base_url('product/save') ?>" method="post">
+                        <form action="<?= base_url('profile/updated') ?>" method="post">
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputEditEmail">Email</label>
-                                    <input type="email" name="editemail" id="inputEditEmail" class="py-2 px-3 bg-white">
+                                    <input type="email" value="<?= $session->get('user_email'); ?>" name="editemail" id="inputEditEmail" class="py-2 px-3 bg-white">
                                 </div>
                             </div>
                             <div class="relative flex-auto p-4 bg-white">
