@@ -259,7 +259,7 @@
               <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
             </div>
             <!-- Form -->
-            <form action="<?= base_url('bahan/add')?>" method="post">
+            <form action="<?= base_url('bahan/add') ?>" method="post">
               <div class="relative flex-auto p-4 bg-white">
                 <div class="flex flex-col">
                   <label for="inputNamaProduk">Nama Bahan</label>
@@ -334,7 +334,11 @@
                     <td><?= $datamaterial['name'] ?></td>
                     <td><?= $datamaterial['amount'] ?></td>
                     <td><?= $datamaterial['name_sup'] ?></td>
-                    <td><a href="<?= base_url() ?>bahan/edit/<?= $datamaterial['id'] ?>/<?= $datamaterial['sup_id'] ?>">Edit</a></td>
+                    <td class="flex flex-row items-center gap-3"><a href="<?= base_url() ?>bahan/edit/<?= $datamaterial['id'] ?>/<?= $datamaterial['name_sup'] ?>">Edit</a><a onclick="" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                        </svg></a><a onclick="deleteMaterial('<?= $active['nickid'] ?>', '<?= $active['supid'] ?>', '<?= $active['nm'] ?>')" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                        </svg></a></td>
                   </tr>
                 <?php }; ?>
               </tbody>
@@ -371,7 +375,11 @@
                     <td><?= $datamaterial['name'] ?></td>
                     <td><?= $datamaterial['amount'] ?></td>
                     <td><?= $datamaterial['name_sup'] ?></td>
-                    <td><a href="<?= base_url() ?>bahan/edit/<?= $datamaterial['id'] ?>/<?= $datamaterial['name_sup'] ?>">Edit</a></td>
+                    <td class="flex flex-row items-center gap-3"><a href="<?= base_url() ?>bahan/edit/<?= $datamaterial['id'] ?>/<?= $datamaterial['name_sup'] ?>">Edit</a><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                        </svg></a><a onclick="deleteMaterial('<?= $active['nickid'] ?>', '<?= $active['supid'] ?>', '<?= $active['nm'] ?>')" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                        </svg></a></td>
                   </tr>
                 <?php }; ?>
               </tbody>

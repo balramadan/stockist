@@ -34,7 +34,7 @@ class Material extends BaseController
         }
         $data = [
             'judul' => 'Bahan',
-            'material' => $active ,
+            'material' => $active,
             'non' => $non
         ];
         echo view('templates/header', $data);
@@ -73,7 +73,8 @@ class Material extends BaseController
         echo view('templates/footer');
     }
 
-    public function updated() {
+    public function updated()
+    {
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
@@ -83,7 +84,7 @@ class Material extends BaseController
         $amount = $this->request->getVar("amount");
         $supplier = $this->request->getVar("supplier");
         $id_material = $this->request->getVar("id");
-        
+
         $amounttoInt = (int)$amount;
 
         $client = \Config\Services::curlrequest();
@@ -100,12 +101,13 @@ class Material extends BaseController
         $bollehh = $statusCode == 202;
         if ($bollehh) {
             return redirect()->to("/bahan");
-        }else {
+        } else {
             return redirect()->to("/");
         }
     }
 
-    public function save() {
+    public function save()
+    {
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
@@ -131,8 +133,13 @@ class Material extends BaseController
         $bollehh = $statusCode == 200;
         if ($bollehh) {
             return redirect()->to("/bahan");
-        }else {
+        } else {
             return redirect()->to("/");
         }
+    }
+
+    public function delete($supplierId = null, $id_material = null)
+    {
+        echo "Berhasil delete";
     }
 }
