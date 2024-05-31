@@ -1,4 +1,5 @@
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="<?= base_url() ?>assets/js/main.js"></script>
 <script src="<?= base_url() ?>assets/js/soft-ui-dashboard-tailwind.js"></script>
 <script src="<?= base_url() ?>assets/js/soft-ui-dashboard-tailwind.min.js"></script>
 <script src="<?= base_url() ?>assets/js/dropdown.js"></script>
@@ -9,6 +10,7 @@
 <script src="<?= base_url() ?>assets/js/tooltips.js"></script>
 <script src="<?= base_url() ?>assets/js/plugins/perfect-scrollbar.min.js"></script>
 <script src="<?= base_url() ?>assets/js/plugins/chartjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/tw-elements.umd.min.js"></script>
 <script src="<?= base_url() ?>assets/js/main.js"></script>
