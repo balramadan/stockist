@@ -73,9 +73,12 @@
                                     <g transform="translate(-1717.000000, -291.000000)" fill="#FFFFFF" fill-rule="nonzero">
                                         <g transform="translate(1716.000000, 291.000000)">
                                             <g transform="translate(1.000000, 0.000000)">
-                                                <path class="" fill="currentColor" d="M45,0 L26,0 C25.447,0 25,0.447 25,1 L25,20 C25,20.379 25.214,20.725 25.553,20.895 C25.694,20.965 25.848,21 26,21 C26.212,21 26.424,20.933 26.6,20.8 L34.333,15 L45,15 C45.553,15 46,14.553 46,14 L46,1 C46,0.447 45.553,0 45,0 Z"></path>
-                                                <path class="" fill="currentColor" d="M22.883,32.86 C20.761,32.012 17.324,31 13,31 C8.676,31 5.239,32.012 3.116,32.86 C1.224,33.619 0,35.438 0,37.494 L0,41 C0,41.553 0.447,42 1,42 L25,42 C25.553,42 26,41.553 26,41 L26,37.494 C26,35.438 24.776,33.619 22.883,32.86 Z"></path>
-                                                <path class="" fill="currentColor" d="M13,28 C17.432,28 21,22.529 21,18 C21,13.589 17.411,10 13,10 C8.589,10 5,13.589 5,18 C5,22.529 8.568,28 13,28 Z"></path>
+                                                <path class="" fill="currentColor" d="M45,0 L26,0 C25.447,0 25,0.447 25,1 L25,20 C25,20.379 25.214,20.725 25.553,20.895 C25.694,20.965 25.848,21 26,21 C26.212,21 26.424,20.933 26.6,20.8 L34.333,15 L45,15 C45.553,15 46,14.553 46,14 L46,1 C46,0.447 45.553,0 45,0 Z">
+                                                </path>
+                                                <path class="" fill="currentColor" d="M22.883,32.86 C20.761,32.012 17.324,31 13,31 C8.676,31 5.239,32.012 3.116,32.86 C1.224,33.619 0,35.438 0,37.494 L0,41 C0,41.553 0.447,42 1,42 L25,42 C25.553,42 26,41.553 26,41 L26,37.494 C26,35.438 24.776,33.619 22.883,32.86 Z">
+                                                </path>
+                                                <path class="" fill="currentColor" d="M13,28 C17.432,28 21,22.529 21,18 C21,13.589 17.411,10 13,10 C8.589,10 5,13.589 5,18 C5,22.529 8.568,28 13,28 Z">
+                                                </path>
                                             </g>
                                         </g>
                                     </g>
@@ -211,7 +214,8 @@
                                                             <g transform="translate(1716.000000, 291.000000)">
                                                                 <g transform="translate(453.000000, 454.000000)">
                                                                     <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
+                                                                    </path>
                                                                 </g>
                                                             </g>
                                                         </g>
@@ -219,7 +223,8 @@
                                                 </svg>
                                             </div>
                                             <div class="flex flex-col justify-center">
-                                                <h6 class="mb-1 font-normal leading-normal text-sm">Payment successfully completed</h6>
+                                                <h6 class="mb-1 font-normal leading-normal text-sm">Payment successfully
+                                                    completed</h6>
                                                 <p class="mb-0 leading-tight text-xs text-slate-400">
                                                     <i class="mr-1 fa fa-clock"></i>
                                                     2 days
@@ -258,7 +263,7 @@
                             <button type="button" data-toggle="modal" data-target="#import" class="fa fa-close w-4 h-4 ml-auto box-content p-2 text-black dark:text-white border-0 rounded-1.5 opacity-50 cursor-pointer -m-2 " data-dismiss="modal"></button>
                         </div>
                         <!-- Form -->
-                        <form action="<?= base_url('product/save') ?>" method="post">
+                        <form action="<?= base_url('produk/save') ?>" method="post">
                             <div class="relative flex-auto p-4 bg-white">
                                 <div class="flex flex-col">
                                     <label for="inputNamaProduk">Nama Produk</label>
@@ -346,7 +351,7 @@
                                 <!-- Tampilan jika layar di Desktop -->
                                 <div class="text-left hidden lg:block justify-start">
                                     <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                    <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
+                                    <p class="text-xs uppercase">ID: <?= $dataAdmin['product_id'] ?></p>
                                     <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
                                 <!-- Tampilan jika di Layar Mobile -->
@@ -373,8 +378,14 @@
                                 <div class="text-center hidden lg:block justify-center">
                                     <p><?= $dataAdmin['price'] ?></p>
                                 </div>
-                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
-                            <?php }; ?>
+                                <div class="flex flex-row text-right justify-end gap-5">
+                                    <div class=""><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
+                                    <div class=""><a onclick="deleteProduk('<?= $active['uuid'] ?>', '<?= $active['name'] ?>')" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                                            </svg></a></div>
+                                </div>
+                            <?php
+                            }; ?>
                         </div>
                     </div>
                 </div>
@@ -403,7 +414,7 @@
                                 <!-- Tampilan jika layar Desktop -->
                                 <div class="text-left hidden lg:block justify-start">
                                     <h3 class="text-base"><?= $dataAdmin['name'] ?></h3>
-                                    <p class="text-xs"><?= $dataAdmin['product_id'] ?></p>
+                                    <p class="text-xs uppercase">ID: <?= $dataAdmin['product_id'] ?></p>
                                     <p class="text-xs"><?= $dataAdmin['category'] ?></p>
                                 </div>
                                 <!-- Tampilan jika Layar Mobile -->
@@ -430,14 +441,22 @@
                                 <div class="text-center hidden lg:block justify-center">
                                     <p><?= $dataAdmin['price'] ?></p>
                                 </div>
-                                <div class="text-right justify-end"><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
-                            <?php }; ?>
+                                <div class="flex flex-row text-right justify-end gap-5">
+                                    <div class=""><a href="<?= base_url() ?>produk/edit/<?= $dataAdmin['product_id'] ?>">Edit</a></div>
+                                    <div class=""><a onclick="deleteProduk('<?= $product['uuid'] ?>', '<?= $product['name'] ?>')" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path fill="currentColor" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
+                                            </svg></a></div>
+                                </div>
+                            <?php
+                            }; ?>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- end Tabs -->
+
+
         <!-- End Main Code -->
 
         <!-- Footer -->

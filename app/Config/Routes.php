@@ -21,25 +21,21 @@ $routes->get('/admin', 'Dashboard::admin');
 
 // Produk
 $routes->get('/produk', 'Product::index');
-
-
-$routes->post('/product/save', 'Product::save');
-
+$routes->post('/produk/save', 'Product::save');
 
 // Edit Produk
 $routes->get('/produk/edit/(:alphanum)', 'Product::edit/$1');
-$routes->post('/product/update', 'Product::update');
+$routes->post('/produk/update', 'Product::update');
+$routes->post('/produk/delete/(:alphanum)', 'Product::delete/$1');
+
 // Bahan
 $routes->get('/bahan', 'Material::index');
-
-// Updated material post data
-$routes->post('/bahan/up', 'Material::updated');
+$routes->post('/bahan/add', 'Material::save');
 
 // Edit Bahan
 $routes->get('/bahan/edit/(:alphanum)/(:alphanum)', 'Material::edit/$1/$2');
-
-// post bahan
-$routes->post('/bahan/add', 'Material::save');
+$routes->post('/bahan/up', 'Material::updated');
+$routes->post('/bahan/delete/(:alphanum)/(:alphanum)', 'Material::delete/$1/$2');
 
 // Profile
 $routes->get('/profile', 'Profile::index');
