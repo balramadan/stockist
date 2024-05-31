@@ -140,6 +140,24 @@ class Material extends BaseController
 
     public function delete($supplierId = null, $id_material = null)
     {
-        echo "Berhasil delete";
+        if (!session()->get('logged_in')) {
+            echo "Login required";
+            return redirect()->to(base_url('/login'));
+        }
+        
+        $client = \Config\Services::curlrequest();
+        $r = $client->delete('https://stockis.vercel.app/api/materials', [
+            'json' => [
+                "id" => $id_material,
+            ],
+        ]);
+        // Get the status code
+        $statusCode = $r->getStatusCode();
+        $bollehh = $statusCode == 202;
+        if ($bollehh) {
+            return redirect()->to("/bahan");
+        } else {
+            return redirect()->to("/");
+        }
     }
 }

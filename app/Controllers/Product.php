@@ -157,6 +157,26 @@ class Product extends BaseController
     }
     
     public function delete($deleteId = null){
-        echo "Delete success";
-    }
+        if (!session()->get('logged_in')) {
+            echo "Login required";
+            return redirect()->to(base_url('/login'));
+        }
+        
+        $client = \Config\Services::curlrequest();
+        $r = $client->delete('https://stockis.vercel.app/api/products', [
+            'json' => [
+                "id" => $deleteId
+            ],
+        ]);
+        // Get the status code
+        $statusCode = $r->getStatusCode();
+        $bollehh = $statusCode == 202;
+
+        if ($bollehh) {
+            return redirect()->to(base_url('/produk'));
+        } else {
+            return redirect()->to(base_url('/'));
+        }
+}
+
 }
