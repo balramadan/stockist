@@ -8,23 +8,14 @@ class Dashboard extends BaseController
 {
     public function index()
     {
+        $session = session();
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
 
-        $curl = curl_init();
 
-        curl_setopt_array($curl, [
-            CURLOPT_URL => 'https://stockis.vercel.app/api/product',
-            CURLOPT_RETURNTRANSFER => true
-        ]);
-
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $data = json_decode($response, true);
-        $res = $data['data'];
-
+        $res = session()->get('product');
         $banyak = [];
         $dikit = [];
         $non = [];
@@ -61,25 +52,38 @@ class Dashboard extends BaseController
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
+        
+        if (session()->has("admin")) {
+            $res = session()->get('admin');
+            $data = [
+                'judul' => 'Admin List',
+                'users' => $res
+            ];
+    
+            echo view('templates/header', $data);
+            echo view('admin/admin', $data);
+            echo view('templates/footer');
+        }
+        else {
+            $curl = curl_init();
 
-        $curl = curl_init();
-
-        curl_setopt_array($curl, [
-            CURLOPT_URL => 'https://stockis.vercel.app/api/admin',
-            CURLOPT_RETURNTRANSFER => true
-        ]);
-
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $data = json_decode($response, true);
-        $res = $data['data'];
-        $data = [
-            'judul' => 'Admin List',
-            'users' => $res
-        ];
-
-        echo view('templates/header', $data);
-        echo view('admin/admin', $data);
-        echo view('templates/footer');
+            curl_setopt_array($curl, [
+                CURLOPT_URL => 'https://stockis.vercel.app/api/admin',
+                CURLOPT_RETURNTRANSFER => true
+            ]);
+    
+            $response = curl_exec($curl);
+            curl_close($curl);
+            $data = json_decode($response, true);
+            $res = $data['data'];
+            $data = [
+                'judul' => 'Admin List',
+                'users' => $res
+            ];
+    
+            echo view('templates/header', $data);
+            echo view('admin/admin', $data);
+            echo view('templates/footer');
+        }
     }
 }

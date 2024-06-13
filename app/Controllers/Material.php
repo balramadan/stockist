@@ -6,40 +6,67 @@ class Material extends BaseController
 {
     public function index()
     {
+        $session = session();
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
 
-        $curl = curl_init();
-
-        curl_setopt_array($curl, [
-            CURLOPT_URL => 'https://stockis.vercel.app/api/material',
-            CURLOPT_RETURNTRANSFER => true
-        ]);
-
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $data = json_decode($response, true);
-        $res = $data['data'];
-        $active = [];
-        $non = [];
-
-        foreach ($res as $item) {
-            if ($item['amount'] >= 1) {
-                $active[] = $item;
-            } else {
-                $non[] = $item;
+        if (session()->has("material")) {
+            $getname = session()->get("material");
+            $active = [];
+            $non = [];
+            
+            foreach ($getname as $item) {
+                if ($item['amount'] >= 1) {
+                    $active[] = $item;
+                } else {
+                    $non[] = $item;
+                }
             }
+            $data = [
+                'judul' => 'Bahan',
+                'material' => $active,
+                'non' => $non
+            ];
+
+            echo view('templates/header', $data);
+            echo view('admin/material', $data);
+            echo view('templates/footer');
+        } else {
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+                CURLOPT_URL => 'https://stockis.vercel.app/api/material',
+                CURLOPT_RETURNTRANSFER => true
+            ]);
+
+            $response = curl_exec($curl);
+            curl_close($curl);
+            $data = json_decode($response, true);
+            $res = $data;
+            $session->set([
+                "material" => $res['data']
+            ]);
+            $active = [];
+            $non = [];
+
+            foreach ($res as $item) {
+                if ($item['amount'] >= 1) {
+                    $active[] = $item;
+                } else {
+                    $non[] = $item;
+                }
+            }
+            $data = [
+                'judul' => 'Bahan',
+                'material' => $active,
+                'non' => $non
+            ];
+            echo view('templates/header', $data);
+            echo view('admin/material', $data);
+            echo view('templates/footer');
         }
-        $data = [
-            'judul' => 'Bahan',
-            'material' => $active,
-            'non' => $non
-        ];
-        echo view('templates/header', $data);
-        echo view('admin/material', $data);
-        echo view('templates/footer');
     }
 
     public function edit($editMaterial = null, $editMaterial2 = null)
@@ -144,7 +171,7 @@ class Material extends BaseController
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
-        
+
         $client = \Config\Services::curlrequest();
         $r = $client->delete('https://stockis.vercel.app/api/materials', [
             'json' => [

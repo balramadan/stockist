@@ -9,42 +9,69 @@ class Product extends BaseController
 
     public function index()
     {
+        $session = session();
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
 
-        $curl = curl_init();
+        if (session()->has("product")) {
+            $getname = session()->get("product");
+            $active = [];
+            $non = [];
 
-        curl_setopt_array($curl, [
-            CURLOPT_URL => 'https://stockis.vercel.app/api/product',
-            CURLOPT_RETURNTRANSFER => true
-        ]);
-
-        $response = curl_exec($curl);
-        curl_close($curl);
-        $data = json_decode($response, true);
-        $res = $data['data'];
-
-        $active = [];
-        $non = [];
-
-        foreach ($res as $item) {
-            if ($item['active'] != 'true') {
-                $non[] = $item;
-            } else {
-                $active[] = $item;
+            foreach ($getname as $item) {
+                if ($item['active'] != 'true') {
+                    $non[] = $item;
+                } else {
+                    $active[] = $item;
+                }
             }
-        }
 
-        $data = [
-            'judul' => 'Produk',
-            'products' => $non,
-            'products_active' => $active,
-        ];
-        echo view('templates/header', $data);
-        echo view('admin/product', $data);
-        echo view('templates/footer');
+            $data = [
+                'judul' => 'Produk',
+                'products' => $non,
+                'products_active' => $active,
+            ];
+            echo view('templates/header', $data);
+            echo view('admin/product', $data);
+            echo view('templates/footer');
+        } else {
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+                CURLOPT_URL => 'https://stockis.vercel.app/api/product',
+                CURLOPT_RETURNTRANSFER => true
+            ]);
+
+            $response = curl_exec($curl);
+            curl_close($curl);
+            $data = json_decode($response, true);
+            $res = $data;
+            $session->set([
+                "product" => $res['data']
+            ]);
+            $getname = session()->get("product");
+            $active = [];
+            $non = [];
+
+            foreach ($getname as $item) {
+                if ($item['active'] != 'true') {
+                    $non[] = $item;
+                } else {
+                    $active[] = $item;
+                }
+            }
+
+            $data = [
+                'judul' => 'Produk',
+                'products' => $non,
+                'products_active' => $active,
+            ];
+            echo view('templates/header', $data);
+            echo view('admin/product', $data);
+            echo view('templates/footer');
+        }
     }
 
     public function edit($editProduct = null)
@@ -75,7 +102,8 @@ class Product extends BaseController
         echo view('templates/footer');
     }
 
-    public function update() {
+    public function update()
+    {
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
@@ -112,7 +140,6 @@ class Product extends BaseController
         } else {
             return redirect()->to(base_url('/'));
         }
-        
     }
 
     public function save()
@@ -155,13 +182,14 @@ class Product extends BaseController
             return redirect()->to(base_url('/'));
         }
     }
-    
-    public function delete($deleteId = null){
+
+    public function delete($deleteId = null)
+    {
         if (!session()->get('logged_in')) {
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
-        
+
         $client = \Config\Services::curlrequest();
         $r = $client->delete('https://stockis.vercel.app/api/products', [
             'json' => [
@@ -177,6 +205,5 @@ class Product extends BaseController
         } else {
             return redirect()->to(base_url('/'));
         }
-}
-
+    }
 }
