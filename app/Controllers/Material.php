@@ -44,9 +44,9 @@ class Material extends BaseController
             $response = curl_exec($curl);
             curl_close($curl);
             $data = json_decode($response, true);
-            $res = $data;
+            $res = $data['data'];
             $session->set([
-                "material" => $res['data']
+                "material" => $data['data']
             ]);
             $active = [];
             $non = [];
@@ -75,9 +75,7 @@ class Material extends BaseController
             echo "Login required";
             return redirect()->to(base_url('/login'));
         }
-
         $amounttoInt = (int)$editMaterial2;
-
         $client = \Config\Services::curlrequest();
         $r = $client->post('https://stockis.vercel.app/api/materials', [
             'json' => [
@@ -126,6 +124,7 @@ class Material extends BaseController
         // Get the status code
         $statusCode = $r->getStatusCode();
         $bollehh = $statusCode == 202;
+        session()->remove('material');
         if ($bollehh) {
             return redirect()->to("/bahan");
         } else {
@@ -158,6 +157,7 @@ class Material extends BaseController
         // Get the status code
         $statusCode = $r->getStatusCode();
         $bollehh = $statusCode == 200;
+        session()->remove('material');
         if ($bollehh) {
             return redirect()->to("/bahan");
         } else {
@@ -181,6 +181,7 @@ class Material extends BaseController
         // Get the status code
         $statusCode = $r->getStatusCode();
         $bollehh = $statusCode == 202;
+        session()->remove('material');
         if ($bollehh) {
             return redirect()->to("/bahan");
         } else {

@@ -16,7 +16,7 @@ class Login extends BaseController
         }
         helper(['form']);
 
-        if (!session()->has("product") && !session()->has("material") && !session()->has("admin")) {
+        if (!session()->has("product") && !session()->has("material")) {
             $curl = curl_init();
 
             curl_setopt_array($curl, [
@@ -99,7 +99,7 @@ class Login extends BaseController
     {
         $session = session();
         if (session()->get('logged_in')) {
-            $session->destroy();
+            session()->remove('logged_in');
             return redirect()->to(base_url('/login'));
         } else {
             $session->setFlashdata('msg', 'Please login first');

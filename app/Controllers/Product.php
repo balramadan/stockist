@@ -134,6 +134,7 @@ class Product extends BaseController
         // Get the status code
         $statusCode = $r->getStatusCode();
         $bollehh = $statusCode == 202;
+        session()->remove('product');
 
         if ($bollehh) {
             return redirect()->to(base_url('/produk'));
@@ -176,6 +177,8 @@ class Product extends BaseController
         $statusCode = $r->getStatusCode();
         $bollehh = $statusCode == 202;
 
+        session()->remove('product');
+
         if ($bollehh) {
             return redirect()->to(base_url('/produk'));
         } else {
@@ -200,6 +203,7 @@ class Product extends BaseController
         $statusCode = $r->getStatusCode();
         $bollehh = $statusCode == 202;
 
+        session()->remove('product');
         if ($bollehh) {
             return redirect()->to(base_url('/produk'));
         } else {
