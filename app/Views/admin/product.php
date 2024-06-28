@@ -244,7 +244,16 @@
 
         <!-- Main Code -->
         <!-- Add product -->
-        <div class="flex flex-row justify-end px-10 py-2">
+        <div class="flex flex-row justify-between px-10 py-2">
+            <form action="" method="GET" class="flex flex-row justify-end">
+                <input type="text" name="search" placeholder="Search" class="px-2 py-1 bg-white border border-gray-300 rounded-tl-lg rounded-bl-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent">
+                <button type="submit" class="flex flex-row px-4 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-tr-lg rounded-br-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14" />
+                    </svg>
+                    <p class="capitalize font-bold">Search</p>
+                </button>
+            </form>
             <button type="button" data-twe-toggle="modal" data-twe-target="#exampleModal" data-twe-ripple-init data-twe-ripple-color="light" class="flex flex-row px-8 py-2 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer active:opacity-85 leading-pro text-xs ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:shadow-soft-xs border-sky-500 text-sky-500 hover:text-sky-500 hover:opacity-75 hover:shadow-none active:scale-100 active:border-sky-500 active:bg-sky-500 active:text-white hover:active:border-sky-500 hover:active:bg-transparent hover:active:text-sky-500 hover:active:opacity-75"><svg xmlns="http://www.w3.org/2000/svg" class="mr-1" width="18" height="18" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M20 14h-6v6h-4v-6H4v-4h6V4h4v6h6z" />
                 </svg>
